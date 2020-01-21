@@ -1,0 +1,194 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Portfolio | main page
+    link(rel="stylesheet", href="./styles/main.pcss")
+  body
+    .wrapper
+      .maincontent
+        //- +image('content/user.jpg', 'user-pic')
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        section.welcome-section
+          section.hero
+            header.header.hero__header
+              .hero__logo
+                a.logo(href="")
+                  h2.logo__title РУ
+              .hero__menu
+                nav.nav
+                  -  var nav = ["Главная","Обо мне","Работа","Навыки","Отзывы","Связаться"];
+                  ul.nav__list
+                    each item in nav
+                      li.nav__item
+                        a.nav__link #{item}
+              .hero__links
+                .socials
+                  ul.socials__list
+                    li.socials__item
+                      a.socials__link(href="")
+                        svg.socials__icon(viewBox="0 0 97.395 97.395" preserveAspectRatio="none")
+                          use(xlink:href="./images/icons/insta.svg")
+                    li.socials__item
+                      a.socials__link(href="")
+                        svg.socials__icon(viewBox="0 0 548.358 548.358" preserveAspectRatio="none")
+                          use(xlink:href="./images/icons/vk.svg")
+                    li.socials__item
+                      a.socials__link(href="")
+                        svg.socials__icon(viewBox="0 0 475.084 475.084" preserveAspectRatio="none")
+                          use(xlink:href="./images/icons/github.svg")
+            .hero__content
+              h1.hero__title Роман Усков
+            .hero__buttons  
+              .hero__scroll-button Скроллить
+          section.about
+            .user.about__user
+              .user__avatar.avatar
+                img.avatar__image(src="./images/content/user.jpg")
+                - var user = [["Проживаю", "Новосибирск"],["Возраст", "25 лет"],["Родился", "31 января"]]
+                table.user__info
+                  each item in user
+                   tr.user__info-row
+                     td.user__info-col #{item[0]}
+                     td.user__info-col #{item[1]}
+              .about__right
+                .about__welcome
+                  p Привет, меня зовут
+                h2.about__title Роман Усков
+                .about__info
+                  p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и совремкнные проекты.
+                .about__ps
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+          section.value
+            .container.value__container
+              .value__info
+                h2.section-title Чем я могу быть Вам полезен
+                .value__info-text 
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+              .value__skills.skills
+                - var skills = [['frontend', ['html', 'css', 'js']],['workflow', ['git', 'terminal', 'gulp']]]
+                ul.skills__list
+                  each item in skills
+                    li.skills__row.skills-row
+                      h3.skills-row__title #{item[0]}
+                      ul.skills-row__list
+                        each skill in item[1]
+                          li.skills-row__item
+                            svg.skill__circle
+                            .skill__title #{skill}
+          section.works
+            .container.works__container
+              h2.section-title Мои работы
+              .works__content
+                .works__slider
+                  .slider
+                    .slider__display
+                      img.slider__display-pic
+                      .slider__display-thumbs
+                        ul.slider-thumbs
+                          - for (var i = 0; i < 3; i++)
+                            li.slider-thumbs__item
+                              a.slider-thumbs__link(href="")
+                                img.slider-thumbs__pic
+                      .slider__buttons
+                        a.direction-button.direction-button--prev
+                        a.direction-button.direction-button--next
+                    .slider__info
+                      .slider__tags
+                        - var tags = ["html", "css", "javascript"]
+                        ul.tags
+                          each item in tags
+                            li.tags__item #{item}
+                      .slider__desc
+                        h3.slider__desc-title Сайт школы образования
+                        .slider__desc-text Этот парень проходил обучение не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .slider__info-buttons
+                        a.iconed-link Посмотреть сайт
+          section.ending-section
+            section.reviews
+              .reviews__top
+                h2.section-title Что обо мне говорят
+                .reviews__buttons
+                  a.direction-button.direction-button--prev-circled
+                  a.direction-button.direction-button--next-circled
+              .reviews__content
+                ul.reviews__list
+                  li.reviews__item
+                    .reviews__commentary 
+                      p Этот парень проходил обучение не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .reviews__user.reviews-user
+                        .reviews-user-avatar
+                          .avatar
+                            img.avatar__image
+                          .reviews-user__info
+                            .reviews-user__name Ковальчук Дмитрий
+                            .reviews-user__occupation Основатель LoftSchool
+                  li.reviews__item
+                    .reviews__commentary 
+                      p Этот код выдержит любые испытания, только, пожалуйста, не загружайте его на слишком старых браузерах
+                      .reviews__user.reviews-user
+                        .reviews-user-avatar
+                          .avatar
+                            img.avatar__image
+                          .reviews-user__info
+                            .reviews-user__name Сабанцев Владимир
+                            .reviews-user__occupation Преподаватель
+            section.review
+              form.review__form(action="")
+                .review__form-wrapper
+                  .review__row
+                    .review__block
+                      label.review__label(for="")
+                      input.review__input
+                    .review__block
+                      label.review__label(for="")
+                      input.review__input
+                  .review__row
+                    .review__block
+                      label.review__label(for="")
+                      textarea.review__input--textarea
+                  .review__buttons
+                    button.button
+          footer.footer
+            .container.footer__container
+              .footer__left
+                .footer__copyright
+                  p @2020
+                .footer__developer
+                  .footer__developer-name Роман Усков
+                  .footer__developer-info Личный сайт веб-разработчика
+              .footer__right
+                .footer__menu
+                  nav.nav
+                    -  var nav = ["Главная","Обо мне","Работа","Навыки","Отзывы","Связаться"];
+                    ul.nav__list
+                      each item in nav
+                        li.nav__item
+                          a.nav__link #{item}
+                .footer__info
+                  .footer__links
+                    .footer__links-desc
+                      p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+                    .socials
+                      ul.socials__list
+                        li.socials__item
+                          a.socials__link(href="")
+                            svg.socials__icon(viewBox="0 0 97.395 97.395" preserveAspectRatio="none")
+                              use(xlink:href="./images/icons/insta.svg")
+                        li.socials__item
+                          a.socials__link(href="")
+                            svg.socials__icon(viewBox="0 0 548.358 548.358" preserveAspectRatio="none")
+                              use(xlink:href="./images/icons/vk.svg")
+                        li.socials__item
+                          a.socials__link(href="")
+                            svg.socials__icon(viewBox="0 0 475.084 475.084" preserveAspectRatio="none")
+                              use(xlink:href="./images/icons/github.svg")
+                    .footer__quote
+                      .footer__quote-text
+                        p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                      .footer__quote-author Martin Golding
