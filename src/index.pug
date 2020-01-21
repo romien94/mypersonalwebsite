@@ -7,7 +7,6 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
-    link(rel="stylesheet", href="./styles/main.pcss")
   body
     .wrapper
       .maincontent
@@ -29,19 +28,12 @@ html(lang="en")
                         a.nav__link #{item}
               .hero__links
                 .socials
+                  - var icons = ["insta", "vk", "github"]
                   ul.socials__list
-                    li.socials__item
-                      a.socials__link(href="")
-                        svg.socials__icon(viewBox="0 0 97.395 97.395" preserveAspectRatio="none")
-                          use(xlink:href="./images/icons/insta.svg")
-                    li.socials__item
-                      a.socials__link(href="")
-                        svg.socials__icon(viewBox="0 0 548.358 548.358" preserveAspectRatio="none")
-                          use(xlink:href="./images/icons/vk.svg")
-                    li.socials__item
-                      a.socials__link(href="")
-                        svg.socials__icon(viewBox="0 0 475.084 475.084" preserveAspectRatio="none")
-                          use(xlink:href="./images/icons/github.svg")
+                    each item in icons
+                      li.socials__item
+                        a.socials__link(href="")
+                          +icon(item,"socials__item")
             .hero__content
               h1.hero__title Роман Усков
             .hero__buttons  
@@ -49,7 +41,7 @@ html(lang="en")
           section.about
             .user.about__user
               .user__avatar.avatar
-                img.avatar__image(src="./images/content/user.jpg")
+                +image("content/user.jpg","avatar__image")
                 - var user = [["Проживаю", "Новосибирск"],["Возраст", "25 лет"],["Родился", "31 января"]]
                 table.user__info
                   each item in user
@@ -175,19 +167,12 @@ html(lang="en")
                     .footer__links-desc
                       p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
                     .socials
+                      - var icons = ["insta", "vk", "github"]
                       ul.socials__list
-                        li.socials__item
-                          a.socials__link(href="")
-                            svg.socials__icon(viewBox="0 0 97.395 97.395" preserveAspectRatio="none")
-                              use(xlink:href="./images/icons/insta.svg")
-                        li.socials__item
-                          a.socials__link(href="")
-                            svg.socials__icon(viewBox="0 0 548.358 548.358" preserveAspectRatio="none")
-                              use(xlink:href="./images/icons/vk.svg")
-                        li.socials__item
-                          a.socials__link(href="")
-                            svg.socials__icon(viewBox="0 0 475.084 475.084" preserveAspectRatio="none")
-                              use(xlink:href="./images/icons/github.svg")
+                        each item in icons
+                          li.socials__item
+                            a.socials__link(href="")
+                              +icon(item,"socials__item")
                     .footer__quote
                       .footer__quote-text
                         p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
