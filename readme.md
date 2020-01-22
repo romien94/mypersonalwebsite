@@ -5,7 +5,7 @@
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/ls-advanced-portfolio.git
+$ git clone https://github.com/romien94/mypersonalwebsite.git
 $ cd ls-advanced-portfolio
 $ yarn
 ```
