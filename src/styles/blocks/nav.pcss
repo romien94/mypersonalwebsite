@@ -2,10 +2,15 @@
   display: flex;
 }
 
-.nav__item {
-  margin-right: 61px;
+.nav__link {
+  display: inline-flex;
+  padding: 40px 32px;
+  border-bottom: 3px solid transparent;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
+.nav__link:hover {
+  color: #ff9d00;
+  font-weight: 600;
+  border-bottom-color: #ff9d00;
+  transition: border-bottom-color .7s;
 }

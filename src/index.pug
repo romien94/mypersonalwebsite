@@ -71,7 +71,7 @@ html(lang="en")
               polygon(points="400,0 400,130 0,130")
           .container.value__container
             .value__info
-              h2.section-title.section-title--black Чем я могу быть Вам полезен
+              h2.section-title.section-title--black Чем я могу быть полезен Вам
               .value__info-text 
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
             .value__skills.skills
@@ -108,7 +108,7 @@ html(lang="en")
                           +icon("arrow-down","direction-button__pic")
                   .slider__info
                     .slider__tags
-                      - var tags = ["html", "css", "javascript"]
+                      - var tags = ["HTML", "CSS", "Javascript"]
                       ul.tags
                         each item in tags
                           li.tags__item #{item}
@@ -133,7 +133,7 @@ html(lang="en")
                 ul.reviews__list
                   li.reviews__item
                     .reviews__commentary 
-                      p Этот парень проходил обучение не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! #[br]4,5 месяца только самых тяжелых #[br] испытаний и бессонных ночей!
                     .reviews__user.reviews-user
                       .reviews-user__avatar
                         .avatar
@@ -143,7 +143,7 @@ html(lang="en")
                         .reviews-user__occupation Основатель LoftSchool
                   li.reviews__item
                     .reviews__commentary 
-                      p Этот код выдержит любые испытания, только, пожалуйста, не загружайте его на слишком старых браузерах
+                      p Этот код выдержит любые испытания. #[br] Только, пожалуйста, не загружайте его на слишком старых браузерах
                     .reviews__user.reviews-user
                       .reviews-user__avatar
                         .avatar
@@ -158,21 +158,35 @@ html(lang="en")
                 .feedback__form-wrapper
                   .feedback__row
                     .feedback__block
-                      +icon("user","feedback__block-icon")
-                      label.feedback__label
-                        span.feedback__label-title Введите Ваше имя
-                        input.feedback__input
+                      label.feedback__label.feedback__label--user
+                        .feedback__label-wrapper
+                          span.feedback__title Введите Ваше имя
+                          input.feedback__field 
                     .feedback__block
-                      +icon("envelope","feedback__block-icon")
-                      label.feedback__label
-                        span.feedback__label-title Введите Ваш email
-                        input.feedback__input
-                  .feedback__row
+                      label.feedback__label.feedback__label--envelope
+                        .feedback__label-wrapper
+                          span.feedback__title Введите Ваш email
+                          input.feedback__field 
+                  .feedback__row.feedback__row--big-margin-bottom
                     .feedback__block
-                      +icon("message","feedback__block-icon")
-                      label.feedback__label 
-                        span.feedback__label-title Сообщение к письму
-                        textarea.feedback__input.feedback__input--textarea
+                      label.feedback__label.feedback__label--message
+                        .feedback__label-wrapper
+                          span.feedback__title Сообщение к письму
+                          textarea.feedback__field.feedback__field--textarea 
+                  //- .feedback__row
+                  //-   .feedback__block
+                  //-     label.feedback__label.feedback__label--user 
+                  //-       span.feedback__title Введите Ваше имя
+                  //-       input.feedback__input
+                  //-   .feedback__block
+                  //-     label.feedback__label.feedback__label--envelope
+                  //-       span.feedback__title Введите Ваш email
+                  //-       input.feedback__input
+                  //- .feedback__row
+                  //-   .feedback__block
+                  //-     label.feedback__label.feedback__label--email
+                  //-       span.feedback__title Сообщение к письму
+                  //-       textarea.feedback__input.feedback__input--textarea
                   .feedback__buttons
                     button.button Отправить
         footer.footer

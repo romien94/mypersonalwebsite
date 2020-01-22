@@ -7,67 +7,103 @@
 }
 
 .feedback .section-title {
-  margin-bottom: 85px;
+  margin-bottom: 88px;
 }
 
-.feedback__form-wrapper {
-  display: flex;
-  flex-direction: column;
+input, button, textarea {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .feedback__row {
   display: flex;
+  margin-bottom: 40px;
+}
+
+.feedback__row--big-margin-bottom {
+  margin-bottom: 75px;
 }
 
 .feedback__block {
-  display: flex;
   flex: 1;
-  border-bottom: 1px solid white;
-  padding: 15px 0;
 }
 
 .feedback__block:not(:last-child) {
-  margin-right: 100px;
-}
-
-.feedback__block:last-child {
-  margin-bottom: 60px;
-}
-
-input,textarea,button {
-  border: none;
-  background-color: transparent;
-  outline: none;
-  padding: 0;
-}
-
-.feedback__input {
-  width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  display: flex;
-}
-
-.feedback__input--textarea {
-  resize: none;
-}
-
-.feedback__block-icon {
-  width: 30px;
-  height: 30px;
-  fill: white;
-  align-self: flex-end;
-  margin-right: 20px;
+  margin-right: 97px;
 }
 
 .feedback__label {
-  width: 100%;
+  display: flex;
+  border-bottom: 1px solid white;
+  padding-bottom: 19px;
+}
+
+.feedback__label:before {
+  content: "";
+  margin-right: 20px;
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+
+.feedback__label--user:before {
+  background-image: svg-load("user.svg", fill=white, width=100%, height=100%, opacity=0.3);
+}
+
+.feedback__label--envelope:before {
+  background-image: svg-load("envelope.svg",fill=white, width=100%, height=100%, opacity=0.3);
+}
+
+.feedback__label--message:before {
+  background-image: svg-load("message.svg",fill=white, width=100%, height=100%, opacity=0.3);
+}
+
+.feedback__block:hover {
+  .feedback__label {
+    border-bottom-color: #f29400;
+    background-image: svg-load(fill=blue);
+  }
+  .feedback__title {
+    color: #f29400;
+  }
+  .feedback__label--user:before {
+    background-image:svg-load("user.svg",fill=#f29400);
+  }
+  .feedback__label--envelope:before {
+    background-image:svg-load("envelope.svg",fill=#f29400);
+  }
+  .feedback__label--message:before {
+    background-image:svg-load("message.svg",fill=#f29400, width=100%,height=100%);
+  }
+}
+
+.feedback__field {
+  color: white;
+}
+
+.feedback__title {
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.feedback__label-title {
   display: flex;
   flex-direction: column;
 }
 
-.feedback__label-title {
-  margin-bottom: 15px;
+.feedback__label-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__title {
+  margin-bottom: 19px;
+}
+
+.feedback__field {
+  font-weight: bold;
+  font-size: 18px;
 }

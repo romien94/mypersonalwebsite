@@ -67,16 +67,30 @@
 }
 
 
-.footer .socials__link{
+.footer {
+  .socials__link{
   display: flex;
-  border: 1px solid #544d61;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   padding: 15px;
   justify-content: center;
   align-items: center;
+
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 1);
+      transition: all .7s;
+    }
+  }
 }
 
 .footer .socials__icon {
   width: 20px;
   height: 20px;
+}
+
+.footer {
+  .nav__list {
+    margin-top: -40px;
+    margin-left: -32px;
+  }
 }
