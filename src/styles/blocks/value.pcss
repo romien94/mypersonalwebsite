@@ -11,6 +11,13 @@
   height: 641px;
   top: 35%;
   left: 0;
+  @include desktop {
+    width: 36%;
+    height: 39vh;
+    top: 48%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .value:after {
@@ -23,10 +30,21 @@
   width: 548px;
   height: 1278px;
   background-repeat: no-repeat;
+  @include desktop {
+    background-size: contain;
+    width: 40vh;
+    height: 84%;
+    top: -12%;
+    left: -6%;
+  }
 }
 
 .value__container {
   padding: 134px 96px 150px 504px;
+  @include desktop {
+    padding-left: 26%;
+    padding-right: 0;
+  }
 }
 
 .value__info {
@@ -45,5 +63,8 @@
 
 .value__skills {
   padding: 0 0 0 120px;
+  @include desktop {
+    padding-left: 8%;
+  }
 }
 

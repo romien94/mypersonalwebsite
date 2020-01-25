@@ -1,9 +1,16 @@
 .feedback__container {
   padding: 155px 0 142px 0;
+  @include desktop {
+    padding-top: 17vh;
+    padding-left: 2.5%;
+  }
 }
 
 .feedback__form {
   width: 57%;
+  @include desktop {
+    width: 76%;
+  }
 }
 
 .feedback .section-title {
@@ -23,6 +30,9 @@ input, button, textarea {
 
 .feedback__row--big-margin-bottom {
   margin-bottom: 75px;
+  @include desktop {
+    margin-bottom: 9vh;
+  }
 }
 
 .feedback__block {

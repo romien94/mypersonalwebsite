@@ -6,12 +6,20 @@
   display: flex;
   padding: 100px 0;
   justify-content: space-between;
+  @include desktop {
+    width: 90%;
+    padding-top: 10vh;
+  }
 }
 
 .footer__left {
   display: flex;
   width: 25%;
   justify-content: space-between;
+  @include desktop {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .footer__developer {
@@ -21,18 +29,26 @@
 
 .footer__right {
   width: 63%;
+  @include desktop {
+    width: 74%;
+  }
 }
 
 .footer__copyright {
   font-size: 48px;
   font-weight: 600;
+  @include desktop {
+    margin-bottom: 1vh;
+  }
 }
+
 
 .footer__developer-name {
   color: white;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 34px;
+  margin-bottom: 6vh;
+  text-transform: uppercase;
 }
 
 .footer__menu .nav {

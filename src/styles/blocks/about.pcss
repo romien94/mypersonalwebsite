@@ -4,7 +4,8 @@
 
 .about__container {
   display: flex;
-  padding: 28px 252px 285px 252px;
+  padding: 11vh 0 27vh 0;
+  justify-content: center;
 }
 
 .user__avatar {
@@ -12,41 +13,32 @@
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
+  margin-bottom: 7vh;
 }
 
 .about__user {
   display: flex;
   flex-direction: column;
-  width: 43%;
   align-items: center;
-  margin-right: 11%;
-}
-
-.user__info {
-  width: 100%;
-}
-
-
-.user__info {
-  border-spacing: 0 18px;
+  margin-right: 5.5%;
 }
 
 .user__info-col {
   color: rgba(255, 255, 255, 0.15);
+  padding-right: 65px;
+  padding-bottom: 1.5vh;
 }
 
 .user__info-col--white {
   color: white;
-  padding-left: 62px;
 }
 
 .about__right {
-  width: 70%;
+  width: 36%;
   font-weight: 600;
-}
-
-.user__avatar {
-  margin-bottom: 55px;
+  @include desktop {
+    width: 44%;
+  }
 }
 
 .about__title {

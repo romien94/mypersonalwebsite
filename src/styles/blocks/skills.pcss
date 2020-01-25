@@ -10,6 +10,7 @@
 
 .skills-row__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .skills-row__title {
@@ -18,6 +19,9 @@
 
 .skills-row {
   margin-bottom: 45px;
+  @include desktop {
+    margin-bottom: 2vh;
+  }
 }
 
 .skills-row:last-child {
@@ -26,6 +30,9 @@
 
 .skills-row__item {
   margin-right: 20px;
+  @include desktop {
+    margin-right: 0;
+  }
 }
 
 .skills-row__item:last-child {
@@ -36,6 +43,10 @@
   font-size: 24px;
   font-weight: bold;
   color: black;
+  @include desktop {
+    padding-left: 3%;
+    margin-bottom: 2vh;
+  }
 }
 
 .skill {

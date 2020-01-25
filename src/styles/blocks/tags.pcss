@@ -1,6 +1,5 @@
 .tags {
   display: flex;
-  margin-bottom: 37px;
 }
 
 .tags__item {
@@ -8,6 +7,9 @@
   background-color: #ebeff3;
   border-radius: 22.5px;
   margin-right: 10px;
+  @include desktop {
+    margin-right: 6%;
+  }
 }
 
 .tags__item:last-child {
