@@ -21,6 +21,7 @@
   margin-bottom: 45px;
   @include desktop {
     margin-bottom: 2vh;
+    align-items: center;
   }
 }
 
@@ -47,6 +48,11 @@
     padding-left: 3%;
     margin-bottom: 2vh;
   }
+  @include tablets {
+    font-size: 18px;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .skill {
@@ -54,6 +60,10 @@
   width: 200px;
   height: 200px;
   position: relative;
+  @include tablets {
+    width: 170px;
+    height: 170px;
+  }
     &__circle {
         &--under {
           stroke:#eaeaea;

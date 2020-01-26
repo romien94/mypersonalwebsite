@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   height: 550px;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .works .section-title {
@@ -13,6 +16,13 @@
   width: 66%;
   @include desktop {
     width: 57%;
+  }
+  @include tablets {
+    width: 90%;
+    min-height: 41vh;
+  }
+  @include tablets {
+    margin-bottom: 7vh;
   }
 }
 
@@ -38,6 +48,9 @@
     font-size: 300px;
     transform: translate(-40%,-21%);
   }
+  @include tablets {
+    transform: translate(-40%,-27%);
+  }
 }
 
 .slider__info {
@@ -46,6 +59,19 @@
   flex-direction: column;
   @include desktop {
     width: 33%;
+  }
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.slider__desc {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -57,12 +83,21 @@
   @include desktop {
     margin-bottom: 3.5vh;
   }
+    @include tablets {
+      font-size: 30px;
+      margin-bottom: 1vh;
+  }
 }
 
 .slider__desc-text {
   font-weight: 600;
   line-height: 1.88;
   margin-bottom: 38px;
+  @include tablets {
+    font-size: 14px;
+    width: 75%;
+    margin-bottom: 1vh;
+  }
 }
 
 .slider__display-thumbs {
@@ -73,6 +108,10 @@
   @include desktop {
     bottom: 38%;
     left: 19%;
+  }
+  @include tablets {
+    bottom: 6%;
+    left: 5.5%;
   }
 }
 
@@ -114,5 +153,8 @@
   margin-bottom: 37px;
     @include desktop {
     margin-bottom: 4vh;
+  }
+  @include tablets {
+    margin-bottom: 2vh;
   }
 }

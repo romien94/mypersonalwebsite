@@ -35,6 +35,15 @@ html(lang="en")
                         li.socials__item
                           a.socials__link(href="")
                             +icon(item,"socials__icon")
+                .burger-menu
+                  a.burger-menu__button
+                    span.burger-menu__line
+                  nav.nav
+                    -  var nav = ["Главная","Обо мне", "Навыки","Работы","Отзывы","Связаться"];
+                    ul.nav__list
+                      each item in nav
+                        li.nav__item
+                          a.nav__link #{item}
               .hero__content
                 h2.hero__sitename
                   span.hero__sitename-row Личный сайт
@@ -136,7 +145,7 @@ html(lang="en")
                           li.tags__item #{item}
                     .slider__desc
                       h3.slider__desc-title Сайт школы образования
-                      .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 #[br] месяца только самых тяжелых  #[br] испытаний и бессонных ночей!
+                      .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых  испытаний и бессонных ночей!
                     .slider__info-buttons
                       a.iconed-link 
                         +icon("link", "iconed-link__pic")
@@ -155,7 +164,7 @@ html(lang="en")
                 ul.reviews__list
                   li.reviews__item
                     .reviews__commentary 
-                      p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! #[br]4,5 месяца только самых тяжелых #[br] испытаний и бессонных ночей!
+                      p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                     .reviews__user.reviews-user
                       .reviews-user__avatar
                         .avatar
@@ -222,7 +231,7 @@ html(lang="en")
             .footer__right
               .footer__menu
                 nav.nav
-                  -  var nav = ["Главная","Обо мне","Работа","Навыки","Отзывы","Связаться"];
+                  -  var nav = ["Главная","Обо мне","Навыки","Работы","Отзывы","Связаться"];
                   ul.nav__list
                     each item in nav
                       li.nav__item

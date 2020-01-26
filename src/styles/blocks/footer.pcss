@@ -1,5 +1,8 @@
 .footer {
   background-color: #0a001d;
+    @include tablets {
+    font-size: 14px;
+  }
 }
 
 .footer__container {
@@ -9,6 +12,9 @@
   @include desktop {
     width: 90%;
     padding-top: 10vh;
+  }
+  @include tablets {
+    padding-top: 2vh;
   }
 }
 
@@ -59,10 +65,16 @@
 .footer__info {
   display: flex;
   justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__links {
   width: 38%;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .footer__links-desc {
@@ -71,6 +83,9 @@
 
 .footer__quote {
   width: 50%;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .footer__quote-text {
@@ -108,5 +123,11 @@
   .nav__list {
     margin-top: -40px;
     margin-left: -32px;
+  }
+}
+
+.footer .socials__list {
+  @include tablets {
+    justify-content: flex-start;
   }
 }

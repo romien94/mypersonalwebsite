@@ -9,6 +9,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablets {
+        margin-bottom: 18vh;
+    }
 }
 
 .hero__container {
@@ -21,12 +24,19 @@
     padding: 2vh 0 5vh 0;
         @include desktop {
             padding: 2vh 1% 5vh 2.5%
-    }
+        }
+        @include tablets {
+            justify-content: flex-start;
+            padding-top: 6vh;
+        }
 }
 
 .hero__content {
     display: flex;
     position: relative;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .hero__sitename {
@@ -38,6 +48,13 @@
     text-align: right;
     top: 0;
     right: 120%;
+    @include tablets {
+        font-size: 16px;
+        position: static;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 3vh;
+    }
 }
 
 .hero__title {
@@ -47,8 +64,16 @@
     font-weight: 800;
     line-height: 0.83;
     text-align: center;
+    @include tablets {
+        font-size: 48px;
+    }
 }
 
+.hero__buttons {
+    @include tablets {
+        display: none;
+    }
+}
 
 .hero__scroll-button {
     display: flex;
@@ -65,4 +90,10 @@
     width: 30px;
     height: 30px;
     fill: white;
+}
+
+.hero__links {
+    @include tablets {
+        flex: 1;
+    }
 }

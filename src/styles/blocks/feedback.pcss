@@ -4,6 +4,9 @@
     padding-top: 17vh;
     padding-left: 2.5%;
   }
+  @include tablets {
+    padding-top: 5.5vh;
+  }
 }
 
 .feedback__form {
@@ -11,10 +14,18 @@
   @include desktop {
     width: 76%;
   }
+  @include tablets {
+    font-size: 14px;
+    width: 100%;
+  }
 }
 
 .feedback .section-title {
   margin-bottom: 88px;
+  @include tablets {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
 }
 
 input, button, textarea {
@@ -33,6 +44,9 @@ input, button, textarea {
   @include desktop {
     margin-bottom: 9vh;
   }
+  @include tablets {
+    margin-bottom: 2vh;
+  }
 }
 
 .feedback__block {
@@ -41,6 +55,9 @@ input, button, textarea {
 
 .feedback__block:not(:last-child) {
   margin-right: 97px;
+  @include tablets {
+    margin-right: 3%;
+  }
 }
 
 .feedback__label {
@@ -115,4 +132,11 @@ input, button, textarea {
 .feedback__field {
   font-weight: bold;
   font-size: 18px;
+}
+
+.feedback__buttons {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }

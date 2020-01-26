@@ -1,10 +1,16 @@
 .reviews__container {
   padding: 140px 0 30px 0;
+  @include tablets {
+    padding-top: 14vh;
+  }
 }
 
 .reviews__top {
   display: flex;
   margin-bottom: 97px;
+  @include tablets {
+    margin-bottom: 6vh;
+  }
 }
 
 .section-title--white {
@@ -13,6 +19,9 @@
 
 .reviews__top .section-title {
   margin-right: 13%;
+  @include tablets {
+    margin-right: 8%;
+  }
 }
 
 .reviews__buttons {
@@ -34,11 +43,23 @@
     width: 74%;
     margin-left: 11%;
   }
+  @include tablets {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 8%;
+  }
 }
 
 .reviews__commentary {
   font-weight: 600;
   line-height: 1.88;
+  color: rgba(255, 255, 255, 0.5);
+  @include tablets {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .reviews__list {
@@ -52,6 +73,9 @@
   width: 41%;
   display: flex;
   flex-direction: column;
+  @include tablets{
+    width: 48%;
+  }
 }
 
 .reviews__user {
@@ -61,6 +85,9 @@
 
 .reviews-user__avatar {
   margin-right: 30px;
+  @include tablets {
+    margin-right: 3%;
+  }
 }
 
 .reviews-user__avatar .avatar__image {
@@ -74,6 +101,9 @@
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
+  @include tablets {
+    font-size: 16px;
+  }
 }
 
 .reviews-user__occupation {

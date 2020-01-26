@@ -1,5 +1,9 @@
 .socials__list {
   display: flex;
+  @include desktop {
+    justify-content: flex-end;
+    margin-right: 16%;
+  }
 }
 
 .socials__link:hover {

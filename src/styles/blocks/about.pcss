@@ -6,6 +6,10 @@
   display: flex;
   padding: 11vh 0 27vh 0;
   justify-content: center;
+  @include tablets {
+    justify-content: space-between;
+    padding: 10.5vh 0 17vh 0;
+  }
 }
 
 .user__avatar {
@@ -14,6 +18,11 @@
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 7vh;
+  @include tablets {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 4vh;
+  }
 }
 
 .about__user {
@@ -21,12 +30,27 @@
   flex-direction: column;
   align-items: center;
   margin-right: 5.5%;
+  @include tablets {
+    width: 40%;
+    margin-right: 0;
+    font-size: 14px;
+  }
 }
 
 .user__info-col {
   color: rgba(255, 255, 255, 0.15);
   padding-right: 65px;
   padding-bottom: 1.5vh;
+  @include tablets {
+    padding-right: 0;
+    padding-bottom: 1vh;
+  }
+}
+
+.user__info-col:first-child {
+  @include tablets {
+    padding-right: 16%;
+  }
 }
 
 .user__info-col--white {
@@ -39,6 +63,10 @@
   @include desktop {
     width: 44%;
   }
+  @include tablets {
+    width: 53%;
+    font-size: 14px;
+  }
 }
 
 .about__title {
@@ -46,6 +74,9 @@
   margin-bottom: 25px;
   font-weight: bold;
   color: white;
+  @include tablets {
+    font-size: 30px;
+  }
 }
 
 .about__welcome-text {
@@ -56,6 +87,11 @@
 .about__info {
   margin-bottom: 94px;
   line-height: 1.88;
+  @include tablets {
+    font-size: 13px;
+    margin-bottom: 4vh;
+    line-height: 1.71;
+  }
 }
 
 .about__ps {

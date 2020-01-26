@@ -1,3 +1,19 @@
+.value__container {
+  padding: 134px 96px 150px 504px;
+  @include desktop {
+    padding-left: 26%;
+    padding-right: 0;
+  }
+  @include tablets {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 11vh;
+    padding-bottom: 52vh;
+  }
+}
+
 .value {
   position: relative;
 }
@@ -37,34 +53,52 @@
     top: -12%;
     left: -6%;
   }
-}
-
-.value__container {
-  padding: 134px 96px 150px 504px;
-  @include desktop {
-    padding-left: 26%;
-    padding-right: 0;
+  @include tablets {
+    width: 41%;
+    top: 50vh;
+    left: 9%;
+    bottom: 0;
+    transform: rotate(90deg);
   }
 }
 
 .value__info {
   width: 70%;
+  margin-bottom: 80px;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
 }
 
 .value .section-title {
   margin-bottom: 46px;
+  @include tablets {
+    font-size: 30px;
+    width: 60%;
+    line-height: 1.2;
+    margin-bottom: 1vh;
+  }
 }
 
 .value__info-text {
   font-weight: 600;
-  margin-bottom: 80px;
   line-height: 1.88;
+  @include tablets {
+    font-size: 14px;
+  }
 }
 
 .value__skills {
   padding: 0 0 0 120px;
   @include desktop {
     padding-left: 8%;
+  }
+  @include tablets {
+    padding: 0;
   }
 }
 
