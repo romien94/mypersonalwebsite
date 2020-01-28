@@ -1,5 +1,7 @@
 .tags {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .tags__item {
@@ -9,6 +11,11 @@
   margin-right: 10px;
   @include desktop {
     margin-right: 6%;
+  }
+  @include phones {
+    font-size: 13px;
+    padding: 1vh 8%;
+    margin-right: 0;
   }
 }
 

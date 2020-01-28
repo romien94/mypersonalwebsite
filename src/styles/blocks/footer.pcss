@@ -16,6 +16,12 @@
   @include tablets {
     padding-top: 2vh;
   }
+  @include phones {
+    flex-direction: column;
+    padding-top: 3vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 .footer__left {
@@ -25,6 +31,10 @@
   @include desktop {
     flex-direction: column;
     justify-content: flex-start;
+  }
+  @include phones {
+    width: 100%;
+    margin-bottom: 8vh;
   }
 }
 
@@ -41,6 +51,10 @@
   @include tablets {
     width: 65%;
     padding-top: 1vh;
+  }
+  @include phones {
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -59,6 +73,9 @@
   font-weight: 600;
   margin-bottom: 6vh;
   text-transform: uppercase;
+  @include phones {
+    margin-bottom: 1vh;
+  }
 }
 
 .footer__menu .nav {

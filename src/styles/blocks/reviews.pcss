@@ -3,6 +3,9 @@
   @include tablets {
     padding-top: 14vh;
   }
+  @include phones {
+    padding-top: 15vh;
+  }
 }
 
 .reviews__top {
@@ -10,6 +13,10 @@
   margin-bottom: 97px;
   @include tablets {
     margin-bottom: 6vh;
+  }
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 4vh;
   }
 }
 
@@ -22,10 +29,17 @@
   @include tablets {
     margin-right: 8%;
   }
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 4vh;
+  }
 }
 
 .reviews__buttons {
   display: flex;
+  @include phones {
+    align-self: center;
+  }
 }
 
 .reviews__buttons .direction-button {
@@ -60,11 +74,17 @@
     font-size: 14px;
     line-height: 1.71;
   }
+  @include phones {
+    margin-bottom: 2vh;
+  }
 }
 
 .reviews__list {
   display: flex;
   justify-content: space-between;
+  @include phones {
+    overflow: hidden;
+  }
 }
 
 .reviews__item {
@@ -76,11 +96,23 @@
   @include tablets{
     width: 48%;
   }
+  @include phones {
+    width: 100%;
+    flex-shrink: 0;
+    justify-content: flex-start;
+  }
 }
 
 .reviews__user {
   display: flex;
   align-items: center;
+  font-size: 18px;
+  @include tablets {
+    font-size: 16px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 .reviews-user__avatar {
@@ -90,20 +122,20 @@
   }
 }
 
-.reviews-user__avatar .avatar__image {
+.reviews-user__avatar .avatar {
   width: 75px;
   height: 75px;
   border-radius: 50%;
+  @include phones {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .reviews-user__name {
-  font-size: 18px;
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
-  @include tablets {
-    font-size: 16px;
-  }
 }
 
 .reviews-user__occupation {

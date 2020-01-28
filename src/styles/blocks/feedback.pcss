@@ -7,6 +7,9 @@
   @include tablets {
     padding-top: 5.5vh;
   }
+  @include phones {
+    padding-top: 9.5vh;
+  }
 }
 
 .feedback__form {
@@ -26,6 +29,9 @@
     text-align: center;
     margin-bottom: 5vh;
   }
+  @include phones {
+    margin-bottom: 8vh;
+  }
 }
 
 input, button, textarea {
@@ -37,7 +43,13 @@ input, button, textarea {
 .feedback__row {
   display: flex;
   margin-bottom: 40px;
-}
+  @include phones {
+    flex-direction: column;
+  }
+  @include phones {
+    margin-bottom: 3vh;
+  }
+  }
 
 .feedback__row--big-margin-bottom {
   margin-bottom: 75px;
@@ -46,6 +58,9 @@ input, button, textarea {
   }
   @include tablets {
     margin-bottom: 2vh;
+  }
+  @include phones {
+    margin-bottom: 4vh;
   }
 }
 
@@ -58,20 +73,26 @@ input, button, textarea {
   @include tablets {
     margin-right: 3%;
   }
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .feedback__label {
   display: flex;
   border-bottom: 1px solid white;
   padding-bottom: 19px;
+  @include phones {
+    margin-bottom: 5vh;
+  }
 }
 
 .feedback__label:before {
   content: "";
   margin-right: 20px;
   align-self: flex-end;
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   background-repeat: no-repeat;
 }
 
