@@ -1,6 +1,5 @@
 .hero {
     height: 100vh;
-    min-width: 650px;
     color: white;
 }
 
@@ -11,6 +10,9 @@
     align-items: center;
     @include tablets {
         margin-bottom: 18vh;
+    }
+    @include phones {
+        margin-bottom: 19vh;
     }
 }
 
@@ -28,6 +30,9 @@
         @include tablets {
             justify-content: flex-start;
             padding-top: 6vh;
+        }
+        @include phones {
+            padding-top: 9vh;
         }
 }
 
@@ -55,6 +60,10 @@
         font-weight: 600;
         margin-bottom: 3vh;
     }
+    @include tablets {
+        font-size: 14px;
+        margin-bottom: .5vh;
+    }
 }
 
 .hero__title {
@@ -66,6 +75,10 @@
     text-align: center;
     @include tablets {
         font-size: 48px;
+    }
+    @include phones {
+        font-size: 36px;
+        line-height: 1.33;
     }
 }
 
@@ -95,5 +108,8 @@
 .hero__links {
     @include tablets {
         flex: 1;
+    }
+    @include phones {
+        display: none;
     }
 }

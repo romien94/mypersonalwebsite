@@ -16,8 +16,14 @@
 
 .triangles__item:first-child {
   width: 78%;
+  @include phones {
+    width: 85%;
+  }
 }
 
 .triangles__item:last-child {
   width: 22%;
+  @include phones {
+    width: 15%;
+  }
 }

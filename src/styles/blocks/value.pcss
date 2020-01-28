@@ -12,6 +12,9 @@
     padding-top: 11vh;
     padding-bottom: 52vh;
   }
+  @include phones {
+    padding-top: 13vh;
+  }
 }
 
 .value {
@@ -72,15 +75,25 @@
     text-align: center;
     margin-bottom: 5vh;
   }
+  @include phones {
+    width: 100%;
+    padding-left: 6%;
+    margin-bottom: 8vh;
+  }
 }
 
 .value .section-title {
   margin-bottom: 46px;
   @include tablets {
-    font-size: 30px;
     width: 60%;
     line-height: 1.2;
     margin-bottom: 1vh;
+  }
+  @include phones {
+    width: 100%;
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 2vh;
   }
 }
 
@@ -89,6 +102,10 @@
   line-height: 1.88;
   @include tablets {
     font-size: 14px;
+  }
+  @include phones {
+    text-align: left;
+    line-height: 1.65;
   }
 }
 

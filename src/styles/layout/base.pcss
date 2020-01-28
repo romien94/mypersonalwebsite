@@ -30,10 +30,8 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
-
-  @include phones {
-    width: 85%;
+  @include tablets {
+    min-width: auto;
   }
 }
 
@@ -94,6 +92,9 @@ img {
   font-weight: bold;
   @include tablets {
     font-size: 30px;
+  }
+  @include phones {
+    font-size: 24px;
   }
 }
 

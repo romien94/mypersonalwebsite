@@ -10,6 +10,11 @@
     justify-content: space-between;
     padding: 10.5vh 0 17vh 0;
   }
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 21vh;
+  }
 }
 
 .user__avatar {
@@ -34,6 +39,10 @@
     width: 40%;
     margin-right: 0;
     font-size: 14px;
+  }
+  @include phones {
+    width: 100%;
+    margin-bottom: 5vh;
   }
 }
 
@@ -67,6 +76,9 @@
     width: 53%;
     font-size: 14px;
   }
+  @include phones {
+    width: 90%;
+  }
 }
 
 .about__title {
@@ -77,11 +89,17 @@
   @include tablets {
     font-size: 30px;
   }
+  @include phones {
+    margin-bottom: 12vh;
+  }
 }
 
 .about__welcome-text {
   margin-bottom: 13px;
   line-height: 1.88;
+  @include phones {
+    margin-bottom: 0vh;
+  }
 }
 
 .about__info {
@@ -98,4 +116,7 @@
   font-style: italic;
   font-weight: normal;
   line-height: 1.88;
+  @include phones {
+    line-height: 1.71;
+  }
 }
