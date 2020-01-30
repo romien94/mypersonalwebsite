@@ -87,69 +87,71 @@ html(lang="en")
               .value__info-text 
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
             .value__skills.skills
-              - 
-                var skills = [
-                  ['Front-end', [
-                    ['HTML5','-25s'],
-                    [ 'CSS3','-13s'],
-                    ['Javascript','-75s'],
-                    ['Jquery и Vue.js','-30s'] ]
-                  ],
-                  ['Workflow', [
-                      ['Git','-13s'],
-                      ['Terminal','-25s'],
-                      ['Gulp','-50s'],
-                      ['Webpack','-40s'] ]
-                  ]
-                ]
-              ul.skills__list
-                each item in skills
-                  li.skills__row.skills-row
-                    h3.skills-row__title #{item[0]}
-                    ul.skills-row__list
-                      each skill in item[1]
-                        li.skills-row__item
-                          .skill
-                            svg.skill__circle(viewbox="0 0 200 200" preserveAspectRatio="none")
-                              defs.defs
-                                linearGradient(x1="0%", y1="50%", x2="100%" y2="100%")#skill__circle-gradient
-                                  stop(offset="60%", stop-color="#005bed").skill__circle-fill--start
-                                  stop(offset="100%", stop-color="#007ef1").skill__circle-fill--end
-                              circle(r="67" cx="100" cy="100").skill__circle.skill__circle--under
-                              circle(r="67" cx="100" cy="100" stroke="url(#skill__circle-gradient)" transform="rotate(-180 100 100)" style=`animation-delay: ${skill[1]};`).skill__circle.skill__circle--above
-                            .skill__title #{skill[0]}
+              #skills-component
+                //- - 
+                //-   var skills = [
+                //-     ['Front-end', [
+                //-       ['HTML5','-25s'],
+                //-       [ 'CSS3','-13s'],
+                //-       ['Javascript','-75s'],
+                //-       ['Jquery и Vue.js','-30s'] ]
+                //-     ],
+                //-     ['Workflow', [
+                //-         ['Git','-13s'],
+                //-         ['Terminal','-25s'],
+                //-         ['Gulp','-50s'],
+                //-         ['Webpack','-40s'] ]
+                //-     ]
+                //-   ]
+                //- ul.skills__list
+                //-   each item in skills
+                //-     li.skills__row.skills-row
+                //-       h3.skills-row__title #{item[0]}
+                //-       ul.skills-row__list
+                //-         each skill in item[1]
+                //-           li.skills-row__item
+                //-             .skill
+                //-               svg.skill__circle(viewbox="0 0 200 200" preserveAspectRatio="none")
+                //-                 defs.defs
+                //-                   linearGradient(x1="0%", y1="50%", x2="100%" y2="100%")#skill__circle-gradient
+                //-                     stop(offset="60%", stop-color="#005bed").skill__circle-fill--start
+                //-                     stop(offset="100%", stop-color="#007ef1").skill__circle-fill--end
+                //-                 circle(r="67" cx="100" cy="100").skill__circle.skill__circle--under
+                //-                 circle(r="67" cx="100" cy="100" stroke="url(#skill__circle-gradient)" transform="rotate(-180 100 100)" style=`animation-delay: ${skill[1]};`).skill__circle.skill__circle--above
+                //-               .skill__title #{skill[0]}
         section.works
           .container.works__container
             h2.section-title Мои работы
             .works__content
-              .works__slider
-                .slider
-                  .slider__display
-                    +image("content/slider/preview-1.png","slider-display__pic")
-                    .slider__display-thumbs
-                      ul.slider-thumbs
-                        - for (var i = 0; i < 3; i++)
-                          li.slider-thumbs__item(class=`${i === 0 ? 'slider-thumbs__item--active' : ''}`)
-                            a.slider-thumbs__link(href="")
-                              +image("content/slider/preview-1.png","slider-thumbs__image ")
-                      .slider__buttons
-                        a.direction-button.direction-button--prev 
-                          +icon("arrow-down","direction-button__pic")
-                        a.direction-button.direction-button--next
-                          +icon("arrow-down","direction-button__pic")
-                  .slider__info
-                    .slider__tags
-                      - var tags = ["HTML", "CSS", "Javascript"]
-                      ul.tags
-                        each item in tags
-                          li.tags__item #{item}
-                    .slider__desc
-                      h3.slider__desc-title Сайт школы образования
-                      .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых  испытаний и бессонных ночей!
-                    .slider__info-buttons
-                      a.iconed-link 
-                        +icon("link", "iconed-link__pic")
-                        span.iconed-link__text Посмотреть сайт
+              #slider-component
+              //- .works__slider
+              //-   .slider
+              //-     .slider__display
+              //-       +image("content/slider/preview-1.png","slider-display__pic")
+              //-       .slider__display-thumbs
+              //-         ul.slider-thumbs
+              //-           - for (var i = 0; i < 3; i++)
+              //-             li.slider-thumbs__item(class=`${i === 0 ? 'slider-thumbs__item--active' : ''}`)
+              //-               a.slider-thumbs__link(href="")
+              //-                 +image("content/slider/preview-1.png","slider-thumbs__image ")
+              //-         .slider__buttons
+              //-           a.direction-button.direction-button--prev 
+              //-             +icon("arrow-down","direction-button__pic")
+              //-           a.direction-button.direction-button--next
+              //-             +icon("arrow-down","direction-button__pic")
+              //-     .slider__info
+              //-       .slider__tags
+              //-         - var tags = ["HTML", "CSS", "Javascript"]
+              //-         ul.tags
+              //-           each item in tags
+              //-             li.tags__item #{item}
+              //-       .slider__desc
+              //-         h3.slider__desc-title Сайт школы образования
+              //-         .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых  испытаний и бессонных ночей!
+              //-       .slider__info-buttons
+              //-         a.iconed-link 
+              //-           +icon("link", "iconed-link__pic")
+              //-           span.iconed-link__text Посмотреть сайт
         section.ending-section
           section.reviews
             .container.reviews__container
@@ -204,20 +206,6 @@ html(lang="en")
                         .feedback__label-wrapper
                           span.feedback__title Сообщение к письму
                           textarea.feedback__field.feedback__field--textarea 
-                  //- .feedback__row
-                  //-   .feedback__block
-                  //-     label.feedback__label.feedback__label--user 
-                  //-       span.feedback__title Введите Ваше имя
-                  //-       input.feedback__input
-                  //-   .feedback__block
-                  //-     label.feedback__label.feedback__label--envelope
-                  //-       span.feedback__title Введите Ваш email
-                  //-       input.feedback__input
-                  //- .feedback__row
-                  //-   .feedback__block
-                  //-     label.feedback__label.feedback__label--email
-                  //-       span.feedback__title Сообщение к письму
-                  //-       textarea.feedback__input.feedback__input--textarea
                   .feedback__buttons
                     button.button Отправить
         footer.footer
@@ -251,3 +239,5 @@ html(lang="en")
                   .footer__quote-text
                     p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   .footer__quote-author Martin Golding
+
+    include ./templates/entry.pug

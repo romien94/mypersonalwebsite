@@ -1,0 +1,44 @@
+script(type="text/x-template")#slider-container
+  .works__slider
+    .slider
+      display
+      info
+
+script(type="text/x-template")#slider-display
+  .slider__display
+    +image("content/slider/preview-1.png","slider-display__pic")
+    buttons
+    thunbs
+
+script(type="text/x-template")#slider-thumbs
+  .slider__display-thumbs
+    ul.slider-thumbs
+      - for (var i = 0; i < 3; i++)
+        li.slider-thumbs__item(class=`${i === 0 ? 'slider-thumbs__item--active' : ''}`)
+          a.slider-thumbs__link(href="")
+            +image("content/slider/preview-1.png","slider-thumbs__image ")
+
+script(type="text/x-template")#slider-buttons
+  .slider__buttons
+    a.direction-button.direction-button--prev 
+      +icon("arrow-down","direction-button__pic")
+    a.direction-button.direction-button--next
+      +icon("arrow-down","direction-button__pic")
+
+script(type="text/x-template")#slider-info
+  .slider__info
+    tags
+
+script(type="text/x-template")#slider-tags
+  .slider__tags
+    - var tags = ["HTML", "CSS", "Javascript"]
+      ul.tags
+        each item in tags
+          li.tags__item #{item}
+    .slider__desc
+      h3.slider__desc-title Сайт школы образования
+        .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых  испытаний и бессонных ночей!
+    .slider__info-buttons
+      a.iconed-link 
+        +icon("link", "iconed-link__pic")
+        span.iconed-link__text Посмотреть сайт
