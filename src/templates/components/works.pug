@@ -3,53 +3,55 @@ script(type="text/x-template")#slider-container
     .slider
       display(
         :works="works",
-        :currentWork="currentWork"
-        @slide="handleSlide"
+        :currentWork="currentWork",
+        @slide="handleSlide",
+        :currentIndex="currentIndex"
       )
       info(
         :currentWork="currentWork"
       )
 
 script(type="text/x-template")#slider-display
-  .slider__display
-    img(:src="currentWork.photo" class="slider-display__pic")
-    //- +image("content/slider/preview-1.png","slider-display__pic")
+  .slider__display(:data-slide="currentIndex + 1")
+    img.slider-display__pic(:src="currentWork.photo")
     buttons(
-      @slide="$emit('slide',$event)"
+      @slide="$emit('slide', $event)" 
     )
-    thunbs(
-      :works="works"
+    thumbs(
+      :works="reversedWorks"
+      :currentWork="currentWork"
     )
 
 script(type="text/x-template")#slider-thumbs
   .slider__display-thumbs
     ul.slider-thumbs
-        //- li.slider-thumbs__item(class=`${i === 0 ? 'slider-thumbs__item--active' : ''}`)
-        li.slider-thumbs__item(v-for="work in works")
-          a.slider-thumbs__link(href="")
-            img(:src="work.photo", alt="" class="slider-thumbs__image")
+      li.slider-thumbs__item(v-for="work in works" :class="{active : work.id === currentWork.id}")
+        a.slider-thumbs__link(href="")
+          img(:src="work.photo" alt="" class="slider-thumbs__image")
 
 script(type="text/x-template")#slider-buttons
   .slider__buttons
-    button(@click.prevent="$emit('slide','prev')").direction-button.direction-button--prev 
+    button(@click.prevent="$emit('slide','prev')").direction-button.direction-button--next
       +icon("arrow-down","direction-button__pic")
-    button(@click.prevent="$emit('slide','next')").direction-button.direction-button--next
+    button(@click.prevent="$emit('slide','next')").direction-button.direction-button--prev
       +icon("arrow-down","direction-button__pic")
 
 script(type="text/x-template")#slider-info
   .slider__info
-    tags()
-  .slider__desc
-    h3.slider__desc-title {{currentWork.title}}
-    .slider__desc-text {{currentWork.desc}}
-  .slider__info-buttons
-    a.iconed-link(
-      :href="currentWork.link"
+    tags(
+      :tags="tagsArray"
     )
-  +icon("link", "iconed-link__pic")
-  span.iconed-link__text Посмотреть сайт
+    .slider__desc
+      h3.slider__desc-title {{currentWork.title}}
+      .slider__desc-text {{currentWork.desc}}
+    .slider__info-buttons
+      a.iconed-link(
+        :href="currentWork.link"
+      )
+        +icon("link", "iconed-link__pic")
+        span.iconed-link__text Посмотреть сайт
 
 script(type="text/x-template")#slider-tags
   .slider__tags
-      ul.tags
-          li.tags__item
+    ul.tags
+      li.tags__item(v-for="tag in tags") {{tag}}

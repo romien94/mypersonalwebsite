@@ -14,6 +14,14 @@ html(lang="en")
         //- +icon('link', 'link-class')
         //- .icon-bg
         section.welcome-section
+          .parallax-header
+            .parallax-header__item.parallax-header__item--1
+            .parallax-header__item.parallax-header__item--2
+            .parallax-header__item.parallax-header__item--3
+            .parallax-header__item.parallax-header__item--4
+            .parallax-header__item.parallax-header__item--5
+            .parallax-header__item.parallax-header__item--6
+            .parallax-header__item.parallax-header__item--7
           section.hero
             .container.hero__container
               header.header.hero__header
@@ -88,83 +96,24 @@ html(lang="en")
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
             .value__skills.skills
               #skills-component
-                //- - 
-                //-   var skills = [
-                //-     ['Front-end', [
-                //-       ['HTML5','-25s'],
-                //-       [ 'CSS3','-13s'],
-                //-       ['Javascript','-75s'],
-                //-       ['Jquery и Vue.js','-30s'] ]
-                //-     ],
-                //-     ['Workflow', [
-                //-         ['Git','-13s'],
-                //-         ['Terminal','-25s'],
-                //-         ['Gulp','-50s'],
-                //-         ['Webpack','-40s'] ]
-                //-     ]
-                //-   ]
-                //- ul.skills__list
-                //-   each item in skills
-                //-     li.skills__row.skills-row
-                //-       h3.skills-row__title #{item[0]}
-                //-       ul.skills-row__list
-                //-         each skill in item[1]
-                //-           li.skills-row__item
-                //-             .skill
-                //-               svg.skill__circle(viewbox="0 0 200 200" preserveAspectRatio="none")
-                //-                 defs.defs
-                //-                   linearGradient(x1="0%", y1="50%", x2="100%" y2="100%")#skill__circle-gradient
-                //-                     stop(offset="60%", stop-color="#005bed").skill__circle-fill--start
-                //-                     stop(offset="100%", stop-color="#007ef1").skill__circle-fill--end
-                //-                 circle(r="67" cx="100" cy="100").skill__circle.skill__circle--under
-                //-                 circle(r="67" cx="100" cy="100" stroke="url(#skill__circle-gradient)" transform="rotate(-180 100 100)" style=`animation-delay: ${skill[1]};`).skill__circle.skill__circle--above
-                //-               .skill__title #{skill[0]}
         section.works
           .container.works__container
             h2.section-title Мои работы
             .works__content
               #slider-component
-              //- .works__slider
-              //-   .slider
-              //-     .slider__display
-              //-       +image("content/slider/preview-1.png","slider-display__pic")
-              //-       .slider__display-thumbs
-              //-         ul.slider-thumbs
-              //-           - for (var i = 0; i < 3; i++)
-              //-             li.slider-thumbs__item(class=`${i === 0 ? 'slider-thumbs__item--active' : ''}`)
-              //-               a.slider-thumbs__link(href="")
-              //-                 +image("content/slider/preview-1.png","slider-thumbs__image ")
-              //-         .slider__buttons
-              //-           a.direction-button.direction-button--prev 
-              //-             +icon("arrow-down","direction-button__pic")
-              //-           a.direction-button.direction-button--next
-              //-             +icon("arrow-down","direction-button__pic")
-              //-     .slider__info
-              //-       .slider__tags
-              //-         - var tags = ["HTML", "CSS", "Javascript"]
-              //-         ul.tags
-              //-           each item in tags
-              //-             li.tags__item #{item}
-              //-       .slider__desc
-              //-         h3.slider__desc-title Сайт школы образования
-              //-         .slider__desc-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых  испытаний и бессонных ночей!
-              //-       .slider__info-buttons
-              //-         a.iconed-link 
-              //-           +icon("link", "iconed-link__pic")
-              //-           span.iconed-link__text Посмотреть сайт
         section.ending-section
-          section.reviews
+          section(@click="checkArrows()" :touched="checkArrows()").reviews
             .container.reviews__container
               .reviews__top
                 h2.section-title.section-title--white Что обо мне говорят
                 .reviews__buttons
-                  a.direction-button.direction-button--next.direction-button--circled
+                  button(@click="previous" :disabled="true").direction-button.direction-button--next.direction-button--circled
                     +icon("arrow-down","direction-button__pic")
-                  a.direction-button.direction-button--prev.direction-button--circled
+                  button(@click="next" :disabled="false").direction-button.direction-button--prev.direction-button--circled
                     +icon("arrow-down","direction-button__pic")
               .reviews__content
-                ul.reviews__list
-                  li.reviews__item
+                flickity(ref="flickity" :options="flickityOptions").reviews__list
+                  .reviews__item
                     .reviews__commentary 
                       p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                     .reviews__user.reviews-user
@@ -174,7 +123,7 @@ html(lang="en")
                       .reviews-user__info
                         .reviews-user__name Ковальчук Дмитрий
                         .reviews-user__occupation Основатель LoftSchool
-                  li.reviews__item
+                  .reviews__item
                     .reviews__commentary 
                       p Этот код выдержит любые испытания. #[br] Только, пожалуйста, не загружайте его на слишком старых браузерах
                     .reviews__user.reviews-user

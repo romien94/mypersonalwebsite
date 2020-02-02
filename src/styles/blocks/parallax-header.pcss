@@ -1,0 +1,49 @@
+.parallax-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  &__item {
+    min-width: 100%;
+    min-height: 100%;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0) translateZ(0);
+    &--1 {
+      background-image: url("~images/parallax/header/parallax-header-1.png");
+      z-index: 1;
+    }
+    &--2 {
+      background-image: url("~images/parallax/header/parallax-header-2.png");
+      z-index: 2;
+    }
+    &--3 {
+      background-image: url("~images/parallax/header/parallax-header-3.png");
+      z-index: 3;
+    }
+    &--4 {
+      background-image: url("~images/parallax/header/parallax-header-4.png");
+      z-index: 4;
+    }
+    &--5 {
+      background-image: url("~images/parallax/header/parallax-header-5.png");
+      z-index: 5;
+    }
+    &--6 {
+      background-image: url("~images/parallax/header/parallax-header-6.png");
+      z-index: 6;
+    }
+    &--7 {
+      background-image: url("~images/parallax/header/parallax-header-7.png");
+      top: 2%;
+      z-index: 7;
+    }
+  }
+}

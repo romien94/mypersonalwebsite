@@ -3,24 +3,24 @@
         "id":1,
         "title":"1 Сайт школы образования",
         "skills": "1 HTML, CCC, Javascript",
-        "photo":"preview-1",
+        "photo":"preview-1.png",
         "link":"//google.com",
-        "desc":"1 Этот парень.."
+        "desc":"1 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool"
     },
     {
         "id":1,
         "title":"1 Сайт школы образования",
-        "skills": "1 HTML, CCC, Javascript",
-        "photo":"preview-2",
+        "skills": "2 HTML, CCC, Javascript",
+        "photo":"preview-2.png",
         "link":"//google.com",
-        "desc":"1 Этот парень.."
+        "desc":"1 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool"
     },
     {
         "id":1,
         "title":"1 Сайт школы образования",
-        "skills": "1 HTML, CCC, Javascript",
-        "photo":"preview-3S",
+        "skills": "3 HTML, CCC, Javascript",
+        "photo":"preview-3.png",
         "link":"//google.com",
-        "desc":"1 Этот парень.."
+        "desc":"1 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool"
     }
 ]
