@@ -25,7 +25,7 @@ script(type="text/x-template")#slider-display
 script(type="text/x-template")#slider-thumbs
   .slider__display-thumbs
     ul.slider-thumbs
-      li.slider-thumbs__item(v-for="work in works" :class="{active : work.id === currentWork.id}")
+      li.slider-thumbs__item(v-for="work in works" :class="{active : work.id === currentWork.id}" @click.prevent="setCurrentWork")
         a.slider-thumbs__link(href="")
           img(:src="work.photo" alt="" class="slider-thumbs__image")
 

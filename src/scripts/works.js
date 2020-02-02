@@ -2,7 +2,12 @@ import Vue from "vue";
 
 const thumbs = {
   template: "#slider-thumbs",
-  props:["works","currentWork"]
+  props:["works","currentWork"],
+  methods: {
+    setCurrentWork(currentSlide) {
+      console.log(e.target);
+    }
+  }
 };
 
 const buttons = {
@@ -60,7 +65,6 @@ new Vue({
       });
     },
     handleSlide(direction) {
-      console.log(direction)
       switch(direction) {
         case "next":
           this.currentIndex++;

@@ -102,7 +102,7 @@ html(lang="en")
             .works__content
               #slider-component
         section.ending-section
-          section(@click="checkArrows()" :touched="checkArrows()").reviews
+          section(@click="checkArrows", @touchend="checkArrows").reviews
             .container.reviews__container
               .reviews__top
                 h2.section-title.section-title--white Что обо мне говорят
@@ -113,26 +113,27 @@ html(lang="en")
                     +icon("arrow-down","direction-button__pic")
               .reviews__content
                 flickity(ref="flickity" :options="flickityOptions").reviews__list
-                  .reviews__item
-                    .reviews__commentary 
-                      p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__user.reviews-user
-                      .reviews-user__avatar
-                        .avatar
-                          +image('users/dmitry.png','avatar__image')
-                      .reviews-user__info
-                        .reviews-user__name Ковальчук Дмитрий
-                        .reviews-user__occupation Основатель LoftSchool
-                  .reviews__item
-                    .reviews__commentary 
-                      p Этот код выдержит любые испытания. #[br] Только, пожалуйста, не загружайте его на слишком старых браузерах
-                    .reviews__user.reviews-user
-                      .reviews-user__avatar
-                        .avatar
-                          +image('users/vladimir.png','avatar__image')
-                      .reviews-user__info
-                        .reviews-user__name Сабанцев Владимир
-                        .reviews-user__occupation Преподаватель
+                  - for (var i = 0; i < 7; i++)
+                    .reviews__item
+                      .reviews__commentary 
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .reviews__user.reviews-user
+                        .reviews-user__avatar
+                          .avatar
+                            +image('users/dmitry.png','avatar__image')
+                        .reviews-user__info
+                          .reviews-user__name Ковальчук Дмитрий
+                          .reviews-user__occupation Основатель LoftSchool
+                  //- .reviews__item
+                  //-   .reviews__commentary 
+                  //-     p Этот код выдержит любые испытания. #[br] Только, пожалуйста, не загружайте его на слишком старых браузерах
+                  //-   .reviews__user.reviews-user
+                  //-     .reviews-user__avatar
+                  //-       .avatar
+                  //-         +image('users/vladimir.png','avatar__image')
+                  //-     .reviews-user__info
+                  //-       .reviews-user__name Сабанцев Владимир
+                  //-       .reviews-user__occupation Преподаватель
           section.feedback
             .container.feedback__container
               h2.section-title.section-title--white Связаться со мной

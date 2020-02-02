@@ -9,6 +9,7 @@
 .direction-button__pic {
   width: 15px;
   height: 15px;
+  stroke: white;
   fill: white;
 }
 
@@ -17,10 +18,17 @@
 }
 
 .direction-button--circled {
-  border: 1px solid #2d3c4e;
+  border: 1px solid white;
   border-radius: 50%;
 }
 
-.direction-button[disabled] {
-  display: none;
+.direction-button--circled {
+  fill: white;
+}
+
+.direction-button--circled[disabled] {
+  border: 1px solid gray;
+}
+.direction-button--circled[disabled] svg {
+  fill: gray;
 }
