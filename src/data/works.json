@@ -8,7 +8,7 @@
         "desc":"1 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool"
     },
     {
-        "id":1,
+        "id":2,
         "title":"1 Сайт школы образования",
         "skills": "2 HTML, CCC, Javascript",
         "photo":"preview-2.png",
@@ -16,7 +16,7 @@
         "desc":"1 Этот парень проходил обучение веб-разработке не где-то, а в Loftschool"
     },
     {
-        "id":1,
+        "id":3,
         "title":"1 Сайт школы образования",
         "skills": "3 HTML, CCC, Javascript",
         "photo":"preview-3.png",

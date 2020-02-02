@@ -2,12 +2,7 @@ import Vue from "vue";
 
 const thumbs = {
   template: "#slider-thumbs",
-  props:["works","currentWork"],
-  methods: {
-    setCurrentWork(currentSlide) {
-      console.log(e.target);
-    }
-  }
+  props:["works","currentWork"]
 };
 
 const buttons = {

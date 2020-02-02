@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.direction-button:hover {
+  background-color: #ff9d00;
+}
+
 .direction-button__pic {
   width: 15px;
   height: 15px;
@@ -31,4 +35,9 @@
 }
 .direction-button--circled[disabled] svg {
   fill: gray;
+}
+
+.direction-button--circled:hover[disabled] {
+  fill: gray;
+  background: none;
 }

@@ -1,10 +1,10 @@
 var parallax = (function() {
-  var ph1 = document.querySelector('.parallax-header__item--1'),
-    ph2 = document.querySelector('.parallax-header__item--2'),
-    ph3 = document.querySelector('.parallax-header__item--3'),
-    ph4 = document.querySelector('.parallax-header__item--4'),
-    ph5 = document.querySelector('.parallax-header__item--5'),
-    ph6 = document.querySelector('.parallax-header__item--6');
+  var ph1 = document.querySelector('.parallax-header__layer--1'),
+    ph2 = document.querySelector('.parallax-header__layer--2'),
+    ph3 = document.querySelector('.parallax-header__layer--3'),
+    ph4 = document.querySelector('.parallax-header__layer--4'),
+    ph5 = document.querySelector('.parallax-header__layer--5'),
+    ph6 = document.querySelector('.parallax-header__layer--6');
   
   return {
     move: function(block, windowScroll, strafeAmount) {

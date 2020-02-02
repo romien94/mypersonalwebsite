@@ -15,13 +15,15 @@ html(lang="en")
         //- .icon-bg
         section.welcome-section
           .parallax-header
-            .parallax-header__item.parallax-header__item--1
-            .parallax-header__item.parallax-header__item--2
-            .parallax-header__item.parallax-header__item--3
-            .parallax-header__item.parallax-header__item--4
-            .parallax-header__item.parallax-header__item--5
-            .parallax-header__item.parallax-header__item--6
-            .parallax-header__item.parallax-header__item--7
+            .parallax-header__layer.parallax-header__layer--1
+            .parallax-header__layer.parallax-header__layer--2
+            .parallax-header__layer.parallax-header__layer--3
+            .parallax-header__layer.parallax-header__layer--4
+            .parallax-header__layer.parallax-header__layer--5
+            .parallax-header__layer.parallax-header__layer--6
+            .parallax-header__layer.parallax-header__layer--7
+            //- .parallax-header__layer
+            //-   img(src=require("images/parallax/header/parallax-header-7.png")).parallax-header__layer-image
           section.hero
             .container.hero__container
               header.header.hero__header
@@ -34,7 +36,7 @@ html(lang="en")
                     ul.nav__list
                       each item in nav
                         li.nav__item
-                          a.nav__link #{item}
+                          a(href="#").nav__link #{item}
                 .hero__links
                   .socials
                     - var icons = ["insta", "vk", "github"]
