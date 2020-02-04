@@ -7,5 +7,261 @@ html(lang="en")
     title Portfolio | admin
   body
     .wrapper.admin-wrapper
-      .maincontent
-        #app-root
+      header.header
+        .container
+          .header__info
+            .user.header__user
+              .user__avatar
+                img.user__avatar-pic
+              .user__name Роман Усков
+            .user__title Панель администратора
+          .header__buttons
+            a.exit-button Выйти
+      nav.menu
+        .menu__container
+          ul.menu__list
+            li.menu__item
+              a(href="#").menu__link Обо мне
+            li.menu__item
+              a(href="#").menu__link Работы
+            li.menu__item
+              a(href="#").menu__link Отзывы
+      main.main
+        .main__container
+          section.about
+            .about__top
+              h2.section-title Обо мне
+              button.button.button--add Добавить группу
+            form.form.about__form(action="")
+              .form__top
+                .form__row
+                  .form__block
+                    input(placeholder="Введите название группы").form__block-field
+                  .form__buttons
+                    button.button.button--save
+                    button.button.button--cancel
+                .form__bottom
+                  .form__row
+                    .form__block
+                      input.form__block-field(type="text" placeholder="Новый навык")
+                    .form__block
+                      input.form__block-field(type="text" placeholder="100")
+                      span.form__block-precent %
+                    .control-buttons
+                      button.button.button--add
+              .about__content
+                ul.about__groups-list
+                  li.about__groups-item.group
+                    form.form.about__form(action="")
+                      .form__top
+                        .form__row
+                          .form__block
+                            input(placeholder="Frontend").form__block-field
+                          .form__buttons
+                            button.button.button--save
+                            button.button.button--cancel
+                        .form__content
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Html5")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="100")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="CSS3")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="90")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Javascript")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="80")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Jquery и Vue.js")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="85")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                        .form__bottom
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Новый навык")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="100")
+                              span.form__block-precent %
+                            .control-buttons
+                              button.button.button--add
+                  li.about__groups-item.group
+                    form.form.about__form(action="")
+                      .form__top
+                        .form__row
+                          .form__block
+                            input(placeholder="Workflow").form__block-field
+                          .form__buttons
+                            button.button.button--save
+                            button.button.button--cancel
+                        .form__content
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Git")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="100")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Terminal")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="90")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Gulp")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="80")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Webpack")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="85")
+                              span.form__block-percent %
+                            .control-buttons
+                              button.button.button--edit
+                              button.button.buttond--delete
+                        .form__bottom
+                          .form__row
+                            .form__block
+                              input.form__block-field(type="text" placeholder="Новый навык")
+                            .form__block
+                              input.form__block-field(type="text" placeholder="100")
+                              span.form__block-precent %
+                            .control-buttons
+                              button.button.button--add
+          section.works
+            .container.works__container
+              h2.section-title Блок "Работы"
+              form.form.works__form(action="")
+                h3.form__title Редактирование работы
+                hr.divider
+                .form__content
+                  .form__content-left
+                    .form__row
+                      .form__block
+                        input.form__block-field(type="file")
+                  .form__content-right
+                    .form__row
+                      label.form__block
+                        span.form__block-title Название
+                        input.form__block-field(type="text" placeholder="")
+                    .form__row
+                      label.form__block
+                        span.form__block-title Ссылка
+                        input.form__block-field(type="link" placeholder="")
+                    .form__row
+                      label.form__block
+                        span.form__block-title Описание
+                        textarea.form__block-field(type="link" placeholder="")
+                    .form__row
+                      label.form__block
+                        span.form__block-title Добавление тэга
+                        input.form__block-field(type="link" placeholder="")
+                      tags
+                        ul.tags__list
+                          li.tags__item HTML5
+                          li.tags__item CSS
+                          li.tags__item Javascript
+                    .form__buttons
+                      button.button.button--cancel Отмена
+                      button.button.button--save Сохранить
+              .works__content
+                .template
+                  a.works__template-link(href="")
+                  .works__template-title Добавить работу
+                ul.works__list
+                  li.works__item.work
+                    .work__display
+                      .work__picture
+                        img.work__picture-img(src="", alt="")
+                      .work__tags
+                        .tags
+                          ul.tags__list
+                            li.tags__item HTML5
+                            li.tags__item CSS
+                            li.tags__item Javascript
+                    .work__info
+                      .work__title Сайт школы образования
+                      .work__desc
+                        p Этот парень ...
+                      a(href="#").work__link
+                  .control-buttons
+                    button.button.button--edit Править
+                    button.button.button--delete Удалить
+          section.reviews
+            .container.reviews__container
+              h2.section-title Блок "Отзывы"
+              hr.divider
+              form.form.reviews__form(action="")
+                h3.form__title Новый отзыв
+                .form__content
+                  .form__content-left
+                    .user__avatar
+                      .user__avatar-pic
+                    a.user__avatar-link
+                  .form__content-right
+                    .form__row
+                      label.form__block
+                        span.form__block-title Имя автора
+                        input.form__block-field(type="text")
+                    .form__row
+                      label.form__block
+                        span.form__block-title Титул автора
+                        input.form__block-field(type="text")
+                    .form__row
+                      label.form__block
+                        span.form__block-title Отзыв
+                        textarea.form__block-field
+                    .control-buttons
+                      button.button.button--edit Править
+                      button.button.button--delete Удалить
+              .reviews__content
+                .template
+                  a.works__template-link(href="")
+                  .works__template-title Добавить Отзыв
+                ul.reviews__list
+                  li.reviews__item.review
+                    .user.review__user
+                      .user__avatar
+                        img.user__avatar-pic
+                      .user__info
+                        .user__info-name Владимир Сабанцев
+                        .user__info-occupation Преподаватель
+                    hr.divider
+                    .review__commentary
+                      p Этот парень..
+                    .control-buttons
+                      button.button.button--edit Править
+                      button.button.button--delete Удалить
