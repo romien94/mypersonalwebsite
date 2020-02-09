@@ -22,12 +22,14 @@ script(type="text/x-template")#slider-display
       :currentWork="currentWork"
     )
 
+
 script(type="text/x-template")#slider-thumbs
   .slider__display-thumbs
     ul.slider-thumbs
       li.slider-thumbs__item(v-for="work in works" :class="{'slider-thumbs__item--active' : work.id === currentWork.id}")
         a.slider-thumbs__link(href="")
           img(:src="work.photo" alt="" class="slider-thumbs__image")
+
 
 script(type="text/x-template")#slider-buttons
   .slider__buttons

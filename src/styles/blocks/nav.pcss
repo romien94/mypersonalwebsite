@@ -10,15 +10,63 @@
 }
 
 .nav__link:hover {
-  color: #ff9d00;
+  color: #5500f2;
   font-weight: 600;
-  border-bottom-color: #ff9d00;
-  transition: border-bottom-color .7s;
+  border-bottom-color: #5500f2;
+  transition: border-bottom-color 0.7s;
 }
 
-.hero__menu .nav {
+.hero__menu {
   @include tablets {
     display: none;
+  }
+}
+
+.burger-menu--active {
+  display: flex;
+  flex-direction: column;
+  padding-left: 68px;
+  position: fixed;
+  justify-content: center;
+  width: 42%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #0a001d;
+  z-index: 100;
+  @include phones {
+    width: 100%;
+  }
+  .burger-menu__button--close {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  }
+  .socials__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    width: 80%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5vh;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 3.5vh
+    }
+    &__link {
+      border-bottom: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -27,8 +75,8 @@
     margin: 0;
     flex-wrap: wrap;
   }
-    @include phones {
-      margin-left: -26%;
+  @include phones {
+    margin-left: -26%;
   }
 }
 

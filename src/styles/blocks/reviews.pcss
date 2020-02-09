@@ -58,9 +58,11 @@
   @include tablets {
     width: 100%;
     margin: 0;
-    display: flex;
     justify-content: center;
     padding-left: 8%;
+  }
+  @include phones {
+    padding-left: 0;
   }
 }
 
@@ -122,6 +124,7 @@
 }
 
 .reviews-user__avatar .avatar {
+    overflow: hidden;
   width: 75px;
   height: 75px;
   border-radius: 50%;

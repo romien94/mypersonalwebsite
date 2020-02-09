@@ -10,20 +10,26 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        //- +image('content/user.jpg', 'user-pic')
-        //- +icon('link', 'link-class')
-        //- .icon-bg
         section.welcome-section
           .parallax-header
-            .parallax-header__layer.parallax-header__layer--1
-            .parallax-header__layer.parallax-header__layer--2
-            .parallax-header__layer.parallax-header__layer--3
-            .parallax-header__layer.parallax-header__layer--4
-            .parallax-header__layer.parallax-header__layer--5
-            .parallax-header__layer.parallax-header__layer--6
-            .parallax-header__layer.parallax-header__layer--7
-            //- .parallax-header__layer
-            //-   img(src=require("images/parallax/header/parallax-header-7.png")).parallax-header__layer-image
+            .parallax-header__layer(data-speed="0.16")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-1.png"))
+            .parallax-header__layer(data-speed="0.17")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-2.png"))
+            .parallax-header__layer(data-speed="0.24")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-3.png"))
+            .parallax-header__layer(data-speed="0.25")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-4.png"))
+            .parallax-header__layer(data-speed="0.26")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-5.png"))
+            .parallax-header__layer(data-speed="0.25")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-6.png"))
+            .parallax-header__layer(data-speed="0.25")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-7.png"))
+            .parallax-header__layer(data-speed="0.23")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-8.png"))
+            .parallax-header__layer(data-speed="0.24")
+              img.parallax-header__layer-bg(src=require("images/parallax/header/parallax-header-9.png"))
           section.hero
             .container.hero__container
               header.header.hero__header
@@ -48,12 +54,21 @@ html(lang="en")
                 .burger-menu
                   a.burger-menu__button
                     span.burger-menu__line
+                    span.burger-menu__line
+                    span.burger-menu__line
                   nav.nav
                     -  var nav = ["Главная","Обо мне", "Навыки","Работы","Отзывы","Связаться"];
                     ul.nav__list
                       each item in nav
                         li.nav__item
                           a.nav__link #{item}
+                                    .socials
+                  - var icons = ["insta", "vk", "github"]
+                  ul.socials__list
+                    each item in icons
+                      li.socials__item
+                        a.socials__link(href="")
+                          +icon(item,"socials__icon")
               .hero__content
                 h2.hero__sitename
                   span.hero__sitename-row Личный сайт
@@ -68,7 +83,7 @@ html(lang="en")
           section.about
             .container.about__container
               .user.about__user
-                .user__avatar.avatar
+                .user__avatar.avatar.user__avatar--big
                   +image("content/user.jpg","avatar__image")
                   - var user = [["Проживаю:", "Москва"],["Возраст:", "25 лет"],["Родился:", "31 января 1994"]]
                 table.user__info
@@ -104,6 +119,15 @@ html(lang="en")
             .works__content
               #slider-component
         section.ending-section
+          .parallax-footer
+            .parallax-footer__layer
+              img.parallax-footer__layer-bg(src=require("images/parallax/footer/parallax-footer-1.png"))
+            .parallax-footer__layer
+              img.parallax-footer__layer-bg.parallax-footer__layer-bg--fog(src=require("images/parallax/footer/parallax-footer-2.png"))
+            .parallax-footer__layer
+              img.parallax-footer__layer-bg(src=require("images/parallax/footer/parallax-footer-3.png"))
+            .parallax-footer__layer
+              img.parallax-footer__layer-bg.parallax-footer__layer-bg--guitar(src=require("images/parallax/footer/parallax-footer-4.png"), data-transform='200')
           section(@click="checkArrows", @touchend="checkArrows").reviews
             .container.reviews__container
               .reviews__top

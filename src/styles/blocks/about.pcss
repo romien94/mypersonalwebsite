@@ -17,7 +17,7 @@
   }
 }
 
-.user__avatar {
+.user__avatar--big {
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -28,6 +28,14 @@
     height: 170px;
     margin-bottom: 4vh;
   }
+}
+
+.user__avatar--small {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
 }
 
 .about__user {
@@ -119,4 +127,27 @@
   @include phones {
     line-height: 1.71;
   }
+}
+
+
+/* admin */
+.about__top {
+  display: flex;
+  margin-bottom: 55px;
+}
+
+.group {
+  width: 530px;
+  height: 37.7vh;
+}
+
+.about__content {
+  display: flex;
+}
+
+.about__groups-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

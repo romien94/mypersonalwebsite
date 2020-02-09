@@ -1,50 +1,121 @@
 .parallax-header {
   width: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
   height: 100%;
-  z-index: -1;
   overflow: hidden;
+  z-index: -1;
+}
 
-  &__layer {
-    min-width: 100%;
-    height: 40%;
-    background-position: 50% 0;
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateX(0) translateZ(0);
+.parallax-header__layer-bg {
+  position: absolute;
+  max-height: none;
+  max-width: none;
+}
+
+.parallax-header__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &:nth-child(1) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      height: 30%;
+      z-index: 1;
+    }
   }
-  &__layer--1 {
-    background-image: url("~images/parallax/header/parallax-header-1.png");
-    z-index: 1;
+  &:nth-child(2) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 2;
+      top: 25%;
+      @include phones {
+        height: 20%;
+      }
+    }
   }
-  &__layer--2 {
-    background-image: url("~images/parallax/header/parallax-header-2.png");
-    z-index: 2;
+  &:nth-child(3) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 3;
+      top: 25%;
+    }
   }
-  &__layer--3 {
-    background-image: url("~images/parallax/header/parallax-header-3.png");
-    z-index: 3;
+  &:nth-child(4) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 4;
+      top: 30%;
+      @include phones {
+        height: 26%;
+      }
+    }
   }
-  &__layer--4 {
-    background-image: url("~images/parallax/header/parallax-header-4.png");
-    z-index: 4;
+  &:nth-child(5) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 5;
+      top: 42%;
+    }
   }
-  &__layer--5 {
-    background-image: url("~images/parallax/header/parallax-header-5.png");
-    z-index: 5;
+  &:nth-child(6) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 6;
+      top: 32%;
+      @include desktop {
+        top: 30%;
+      }
+      @include tablets {
+        top: 27%;
+      }
+      @include phones {
+        height: 25%;
+      }
+    }
   }
-  &__layer--6 {
-    background-image: url("~images/parallax/header/parallax-header-6.png");
-    z-index: 6;
+  &:nth-child(7) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: 7;
+      top: 48%;
+      @include desktop {
+        top: 40%;
+      }
+      @include tablets {
+        top: 34%;
+      }
+      @include phones {
+        top: 48%;
+      }
+    }
   }
-  &__layer--6 {
-    background-color: #06001d;
-    z-index: 7;
-    bottom: 0;
-    width: 50%;
+  &:nth-child(8) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 8;
+      top: 40%;
+      @include phones {
+        height: 70%;
+      }
+    }
+  }
+  &:nth-child(9) {
+    .parallax-header__layer-bg {
+      object-fit: cover;
+      width: 100%;
+      z-index: 9;
+      top: 30%;
+    }
   }
 }
+

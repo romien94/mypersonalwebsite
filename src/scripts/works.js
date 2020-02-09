@@ -1,12 +1,12 @@
 import Vue from "vue";
 
+const buttons = {
+  template: "#slider-buttons"
+};
+
 const thumbs = {
   template: "#slider-thumbs",
   props:["works","currentWork"]
-};
-
-const buttons = {
-  template: "#slider-buttons"
 };
 
 const tags = {
