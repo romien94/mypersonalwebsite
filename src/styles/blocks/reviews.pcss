@@ -95,7 +95,7 @@
   flex-direction: column;
   margin-right: 5%;
   @include tablets{
-    width: 48%;
+    width: 320px;
   }
   @include phones {
     width: 100%;
@@ -142,4 +142,129 @@
 
 .reviews-user__occupation {
   font-weight: 600;
+}
+
+.reviews .section-title {
+  font-size: 21px;
+  margin-bottom: 6vh;
+}
+
+.reviews .form__content {
+  padding-right: 25%;
+  flex-direction: row;
+  @include tablets {
+    padding-right: 0;
+  }
+}
+
+.reviews .form__content-left {
+  width: auto;
+  margin-right: 5%;
+}
+
+.reviews .form__content-right {
+  flex: 1;
+}
+
+.admin-wrapper .reviews .user__avatar {
+  margin-bottom: 2vh;
+}
+
+.user__avatar--blue {
+  background-color: #dee4ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user__avatar-icon {
+  stroke: white;
+  fill: white;
+  width: 85px;
+}
+
+.form__block-field--hidden {
+  display: none;
+}
+
+
+.user__avatar-link {
+  text-align: center;
+  color: #383bcf;
+  font-weight: 600;
+}
+
+.admin-wrapper .reviews__item {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1px black;
+  margin-left: 3%;
+  padding: 4vh 2.5%;
+}
+
+.reviews__item:first-child {
+  padding: 0;
+}
+
+.reviews__content--fullwidth {
+  width: 100%;
+  padding: 0;
+}
+
+.admin-wrapper .reviews__list {
+  margin-left: -3%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.admin-wrapper .reviews__item {
+  margin-right: 0;
+  margin-bottom: 3.8vh;
+}
+
+.reviews__form {
+  margin-bottom: 2rem;
+}
+
+.reviews .user__avatar {
+  margin: 0 15px 0 0;
+}
+
+.admin-wrapper .review__user {
+  display: flex;
+  padding-bottom: 3.5vh;
+}
+
+.admin-wrapper .user__avatar-pic {
+  max-height: none;
+}
+
+.divider--gray {
+  background-color: lightgray;
+  height: .5px;
+  margin-bottom: 3vh;
+}
+
+.admin-wrapper .user__info-name {
+  font-weight: 700;
+  margin-bottom: .5vh;
+}
+
+.admin-wrapper .user__info-occupation,
+.admin-wrapper .review__commentary {
+  font-weight: 600;
+  color: #414c63;
+  opacity: .7;
+}
+
+
+.reviews .control-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews .form__row:first-child,
+.reviews .form__row:nth-child(2) {
+  padding-right: 28%;
 }

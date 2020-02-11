@@ -134,6 +134,7 @@
 .about__top {
   display: flex;
   margin-bottom: 55px;
+  align-items: center; 
 }
 
 .group {
@@ -150,4 +151,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.about {
+  .section-title {
+    margin-right: 60px;
+  }
+}
+
+.form__block--halfwidth input.form__block-field:first-child {
+  @include tablets {
+    border: none;
+  }
 }

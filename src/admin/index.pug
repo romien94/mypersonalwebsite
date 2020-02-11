@@ -34,7 +34,8 @@ html(lang="en")
               .container.section-container
                 .about__top
                   h2.section-title.section-title--black.section-title--small Обо мне
-                  button.add-button Добавить группу
+                  button(id="add-button").add-button.add-button--small
+                  label.add-button__label(for="add-button" style="color: black") Добавить группу
                 .about__content
                   ul.about__groups-list
                     li.about__groups-item.group
@@ -42,18 +43,21 @@ html(lang="en")
                         .form__wrapper
                           .form__top
                             .form__row
-                              .form__block
-                                input(placeholder="Название новой группы").form__block-field.form__block-field--bottomborder
+                              .form__block.form__block--halfwidth
+                                input(placeholder="Название новой группы").form__block-field.form__block-field--bottomline.form__block-field--semibold
                               .form__buttons
                                 button.save-button
+                                  +icon('tick','save-button__pic')
                                 button.cancel-button
+                                  +icon('remove','cancel-button__pic')
+                            hr.form__hr
                           .form__bottom
-                            .form__row
+                            .form__row.form__row--halfwidth
                               .form__block
-                                input.form__block-field(type="text" placeholder="Новый навык")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="100")
-                                span.form__block-precent %
+                                input.form__block-field.form__block-field--padding.form__block-field--bottomline(type="text" placeholder="Новый навык")
+                              .form__block.form__block-percents
+                                input.form__block-field.form__block-field--padding.form__block-field--bottomline(type="text" placeholder="100")
+                                span.form__block-percent %
                               .control-buttons
                                 button.add-button
                     li.about__groups-item.group
@@ -61,55 +65,133 @@ html(lang="en")
                         .form__wrapper
                           .form__top
                             .form__row
-                              .form__block
-                                input(placeholder="Frontend").form__block-field
+                              .form__block.form__block--halfwidth
+                                input(placeholder="Workflow" disabled).form__block-field.form__block-field--bottomline.form__block-field--semibold
                               .form__buttons
                                 button.save-button
-                                button.cancel
+                                  +icon('tick','save-button__pic')
+                                button.cancel-button
+                                  +icon('remove','cancel-button__pic')
+                            hr.form__hr
                           .form__content
                             .form__row
-                              .form__block
-                                input.form__block-field(type="text" placeholder="Html5")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="100")
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Git" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="100" disabled)
                                 span.form__block-percent %
                               .control-buttons
                                 button.edit-button
+                                  +icon('pencil','edit-button__pic')
                                 button.delete-button
+                                  +icon('trash','delete-button__pic')
                             .form__row
-                              .form__block
-                                input.form__block-field(type="text" placeholder="CSS3")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="90")
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Terminal" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="90" disabled)
                                 span.form__block-percent %
                               .control-buttons
                                 button.edit-button
+                                  +icon('pencil','edit-button__pic')
                                 button.delete-button
+                                  +icon('trash','delete-button__pic')
                             .form__row
-                              .form__block
-                                input.form__block-field(type="text" placeholder="Javascript")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="80")
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Gulp" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="80" disabled)
                                 span.form__block-percent %
                               .control-buttons
                                 button.edit-button
+                                  +icon('pencil','edit-button__pic')
                                 button.delete-button
+                                  +icon('trash','delete-button__pic')
                             .form__row
-                              .form__block
-                                input.form__block-field(type="text" placeholder="Jquery и Vue.js")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="85")
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Webpack" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="85" disabled)
                                 span.form__block-percent %
                               .control-buttons
                                 button.edit-button
+                                  +icon('pencil','edit-button__pic')
                                 button.delete-button
+                                  +icon('trash','delete-button__pic')
                           .form__bottom
+                            .form__row.form__row--halfwidth
+                              .form__block
+                                input.form__block-field.form__block-field--padding.form__block-field--bottomline(type="text" placeholder="Новый навык")
+                              .form__block.form__block-percents
+                                input.form__block-field.form__block-field--bottomline(type="text" placeholder="100")
+                                span.form__block-percent %
+                              .control-buttons
+                                  button.add-button
+                    li.about__groups-item.group
+                      form.form.about__form(action="")
+                        .form__wrapper
+                          .form__top
                             .form__row
-                              .form__block
-                                input.form__block-field(type="text" placeholder="Новый навык")
-                              .form__block
-                                input.form__block-field(type="text" placeholder="100")
-                                span.form__block-precent %
+                              .form__block.form__block--halfwidth
+                                input(placeholder="Frontend" disabled).form__block-field.form__block-field--bottomline.form__block-field--semibold
+                              .form__buttons
+                                button.save-button
+                                  +icon('tick','save-button__pic')
+                                button.cancel-button
+                                  +icon('remove','cancel-button__pic')
+                            hr.form__hr
+                          .form__content
+                            .form__row
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Html5" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="100" disabled)
+                                span.form__block-percent %
+                              .control-buttons
+                                button.edit-button
+                                  +icon('pencil','edit-button__pic')
+                                button.delete-button
+                                  +icon('trash','delete-button__pic')
+                            .form__row
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="CSS3" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="90" disabled)
+                                span.form__block-percent %
+                              .control-buttons
+                                button.edit-button
+                                  +icon('pencil','edit-button__pic')
+                                button.delete-button
+                                  +icon('trash','delete-button__pic')
+                            .form__row
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Javascript" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="80" disabled)
+                                span.form__block-percent %
+                              .control-buttons
+                                button.edit-button
+                                  +icon('pencil','edit-button__pic')
+                                button.delete-button
+                                  +icon('trash','delete-button__pic')
+                            .form__row
+                              .form__block.form__block-title
+                                input.form__block-field(type="text" placeholder="Jquery и Vue.js" disabled)
+                              .form__block.form__block-percents
+                                input.form__block-field(type="text" placeholder="85" disabled)
+                                span.form__block-percent %
+                              .control-buttons
+                                button.edit-button
+                                  +icon('pencil','edit-button__pic')
+                                button.delete-button
+                                  +icon('trash','delete-button__pic')
+                          .form__bottom
+                            .form__row.form__row--halfwidth
+                              .form__block.form__block-field--bottomline
+                                input.form__block-field.form__block-field--padding(type="text" placeholder="Новый навык")
+                              .form__block.form__block-percents
+                                input.form__block-field.form__block-field--bottomline(type="text" placeholder="100")
+                                span.form__block-percent %
                               .control-buttons
                                   button.add-button
             section.works
@@ -122,43 +204,46 @@ html(lang="en")
                     .form__content.form__content--row
                       .form__content-left
                         .form__row
-                          .form__block
+                          label.form__block.form__block--file
+                            div.form__block-field--visual.file-load
+                              .file-load__title Перетащите или загрузите для загрузки изображения
+                              button.file-load__button Загрузить
                             input.form__block-field(type="file")
                       .form__content-right
                         .form__row
-                          label.form__block.form__block--full-width
+                          label.form__block.form__block--fullwidth.form__block--bottomline.form__block--vertical
                             span.form__block-title Название
-                            input.form__block-field(type="text" placeholder="")
+                            input.form__block-field.form__block-field--bottompadding(type="text" placeholder="")
                         .form__row
-                          label.form__block.form__block--full-width
+                          label.form__block.form__block--fullwidth.form__block--bottomline.form__block--vertical
                             span.form__block-title Ссылка
-                            input.form__block-field(type="link" placeholder="")
+                            input.form__block-field.form__block-field--bottompadding(type="link" placeholder="")
                         .form__row
-                          label.form__block.form__block--full-width
+                          label.form__block.form__block--fullwidth.form__block--vertical
                             span.form__block-title Описание
-                            textarea.form__block-field(type="link" placeholder="")
+                            textarea.form__block-field.form__block-field--bordered(type="link" placeholder="")
                         .form__row.form__row--vertical
-                          label.form__block.form__block--full-width
+                          label.form__block.form__block--fullwidth.form__block--bottomline.form__block--vertical
                             span.form__block-title Добавление тэга
-                            input.form__block-field(type="link" placeholder="")
+                            input.form__block-field.form__block-field--bottompadding(type="link" placeholder="")
                           tags
                             ul.tags__list
                               li.tags__item HTML5
                               li.tags__item CSS
                               li.tags__item Javascript
                         .form__buttons
-                          button.cancel-button Отмена
-                          button.save-button Сохранить
+                          button.cancel-button.cancel-button--purple Отмена
+                          button.save-button.save-button--purple Сохранить
                 .works__content
                   ul.works__list
                     li.works__item.works__item--template
                       .template
-                        a.works__template-link(href="")
+                        button.add-button.add-button--big-bordered
                         .works__template-title Добавить работу
                     li.works__item.work
                       .work__display
                         .work__picture
-                          img.work__picture-img(src="" alt="")
+                          +image("content/slider/preview-1.png","work__picture-pic")
                         .work__tags
                           .tags
                             ul.tags__list
@@ -169,53 +254,67 @@ html(lang="en")
                         .work__content
                           .work__title Сайт школы образования
                           .work__desc
-                            p Этот парень ...
-                          a(href="#").work__link
+                            p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                          a(href="#").work__link https://loftschool.com
                         .control-buttons
-                          button.edit-button Править
-                          button.delete-button Удалить
+                          button.edit-button 
+                            span.edit-button__text Править
+                            +icon('pencil','edit-button__pic edit-button__pic--purple')
+                          button.delete-button 
+                            span.delete-button__text Удалить
+                            +icon('remove','delete-button__pic delete-button__pic--red')
             section.reviews
               .container.reviews__container
-                h2.section-title Блок "Отзывы"
-                hr.divider
+                h2.section-title Блок "Отзывы"        
                 form.form.reviews__form(action="")
-                  h3.form__title Новый отзыв
-                  .form__content
-                    .form__content-left
-                      .user__avatar
-                        .user__avatar-pic
-                      a.user__avatar-link
-                    .form__content-right
-                      .form__row
-                        label.form__block
-                          span.form__block-title Имя автора
-                          input.form__block-field(type="text")
-                      .form__row
-                        label.form__block
-                          span.form__block-title Титул автора
-                          input.form__block-field(type="text")
-                      .form__row
-                        label.form__block
-                          span.form__block-title Отзыв
-                          textarea.form__block-field
-                        .control-buttons
-                          button.edit-button Править
-                          button.delete-button Удалить
-                .reviews__content
-                  .template
-                    a.works__template-link(href="")
-                    .works__template-title Добавить Отзыв
+                  .form__wrapper
+                    h3.form__title Новый отзыв
+                    .divider   
+                    .form__content
+                      .form__content-left
+                        .user__avatar.user__avatar--big.user__avatar--blue
+                          +icon('user','user__avatar-icon')
+                        label.form__block.form__block--vertical
+                          input.form__block-field.form__block-field--hidden(type="file")
+                          a.user__avatar-link Добавить фото
+                      .form__content-right
+                        .form__row
+                          label.form__block.form__block--vertical.form__block--bottomline.form__block--fullwidth
+                            span.form__block-title Имя автора
+                            input.form__block-field.form__block-field--bottompadding(type="text")
+                        .form__row
+                          label.form__block.form__block--vertical.form__block--bottomline.form__block--fullwidth
+                            span.form__block-title Титул автора
+                            input.form__block-field.form__block-field--bottompadding(type="text")
+                        .form__row
+                          label.form__block.form__block--vertical.form__block--fullwidth
+                            span.form__block-title Отзыв
+                            textarea.form__block-field.form__block-field--bordered
+                        .form__buttons
+                          button.cancel-button.cancel-button--purple Отмена
+                          button.save-button.save-button--purple Сохранить
+                .reviews__content.reviews__content--fullwidth
                   ul.reviews__list
+                    li.reviews__item
+                      .template
+                        button.add-button.add-button--big-bordered
+                        .works__template-title Добавить Отзыв
                     li.reviews__item.review
                       .user.review__user
-                        .user__avatar
-                          img.user__avatar-pic
+                        .user__avatar.user__avatar--small
+                          +image('users/dmitry.png','user__avatar-pic')
                         .user__info
                           .user__info-name Владимир Сабанцев
                           .user__info-occupation Преподаватель
-                      hr.divider
+                      hr.divider.divider--gray
                       .review__commentary
-                        p Этот парень..
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                       .control-buttons
-                        button.edit-button Править
-                        button.delete-button Удалить
+                        .control-buttons__block
+                          span.control-buttons__block-text Править
+                          button.edit-button
+                            +icon('pencil','edit-button__pic edit-button__pic--purple')
+                        .control-buttons__block
+                          span.control-buttons__block-text Удалить
+                          button.delete-button
+                            +icon('remove','delete-button__pic delete-button__pic--red')

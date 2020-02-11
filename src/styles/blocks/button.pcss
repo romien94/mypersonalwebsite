@@ -16,3 +16,88 @@
 .button:hover {
   background: linear-gradient(to left,#5500f2,#0089f2);
 }
+
+.save-button__pic,
+.edit-button__pic,
+.cancel-button__pic,
+.delete-button__pic {
+  width: 15px;
+}
+.save-button__pic {
+  fill: green;
+}
+.cancel-button__pic {
+  fill: red;
+}
+
+.edit-button__pic,
+.delete-button__pic {
+  fill: gray;
+}
+
+.delete-button__text,
+.edit-button__text {
+  margin-right: 10px;
+}
+
+.edit-button__pic--purple {
+  fill: #1b53de;
+}
+
+.delete-button__pic--red {
+  fill: red;
+}
+
+.add-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, #1b53de, #453bcd);
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+}
+
+.add-button:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.add-button--small {
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+
+.add-button__label {
+  color: #383bcf;
+}
+
+.add-button--big-bordered {
+  border: 2px solid white;
+  width: 150px;
+  height: 150px;
+  font-size: 72px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.cancel-button--purple {
+  color: #383bcf;
+  font-weight: 700;
+  margin-right: 60px;
+}
+
+.save-button--purple {
+  padding: 20px 40px;
+  background: linear-gradient(to right, #1b53de, #453bcd);
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}

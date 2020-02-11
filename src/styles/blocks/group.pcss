@@ -1,7 +1,10 @@
 .group {
-  width: 49%;
-  height: 37.7vh;
+  width: 320px;
+  min-height: 48.7vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 3vh;
+  @include tablets {
+    min-height: 45vh;
+  }
 }
