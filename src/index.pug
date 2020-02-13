@@ -163,25 +163,25 @@ html(lang="en")
           section.feedback
             .container.feedback__container
               h2.section-title.section-title--white Связаться со мной
-              form.feedback__form(action="")
+              form.feedback__form(action="")#form
                 .feedback__form-wrapper
                   .feedback__row
                     .feedback__block
                       label.feedback__label.feedback__label--user
                         .feedback__label-wrapper
                           span.feedback__title Введите Ваше имя
-                          input.feedback__field 
+                          input.feedback__field(required)
                     .feedback__block
                       label.feedback__label.feedback__label--envelope
                         .feedback__label-wrapper
                           span.feedback__title Введите Ваш email
-                          input.feedback__field 
+                          input(type="email" required).feedback__field
                   .feedback__row.feedback__row--big-margin-bottom
                     .feedback__block
                       label.feedback__label.feedback__label--message
                         .feedback__label-wrapper
                           span.feedback__title Сообщение к письму
-                          textarea.feedback__field.feedback__field--textarea 
+                          textarea.feedback__field.feedback__field--textarea(required)
                   .feedback__buttons
                     button.button Отправить
         footer.footer

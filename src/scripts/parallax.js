@@ -19,7 +19,6 @@ function performGuitarAnimation(wScroll) {
 
 window.addEventListener('scroll',e => {
   const wScroll = window.pageYOffset;
-  console.log(wScroll);
   if (wScroll <= 1000) {
     moveHeaderLayersOnScroll(wScroll);
   } if (wScroll >= 4000) {

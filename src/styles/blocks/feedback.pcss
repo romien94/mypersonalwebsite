@@ -79,6 +79,7 @@ input, button, textarea {
 }
 
 .feedback__label {
+  position: relative;
   display: flex;
   border-bottom: 1px solid white;
   padding-bottom: 19px;
@@ -160,4 +161,21 @@ input, button, textarea {
     display: flex;
     justify-content: center;
   }
+}
+
+.error {
+  position: absolute;
+  background-color: red;
+  color: white;
+  top: 100%;
+  padding: 5px;
+}
+
+.error:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border: 10px solid transparent;
+  border-bottom-color:red;
 }

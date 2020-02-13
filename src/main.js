@@ -8,3 +8,4 @@ import "./scripts/skills";
 import "./scripts/works";
 import "./scripts/parallax";
 import "./scripts/flickity";
+import "./scripts/form-validation";
