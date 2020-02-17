@@ -155,6 +155,10 @@
   @include tablets {
     padding-right: 0;
   }
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews .form__content-left {
@@ -201,6 +205,10 @@
   box-shadow: 0 0 1px black;
   margin-left: 3%;
   padding: 4vh 2.5%;
+  width: 47%;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .reviews__item:first-child {
@@ -267,4 +275,7 @@
 .reviews .form__row:first-child,
 .reviews .form__row:nth-child(2) {
   padding-right: 28%;
+  @include phones {
+    padding: 0;
+  }
 }

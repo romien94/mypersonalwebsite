@@ -6,18 +6,21 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding: 1.7vh 2.5%;
+  padding: 2.1vh 2.5%;
 }
 
 .header__info {
   display: flex;
   align-items: center;
+    @include phones {
+    flex-direction: column;
+  }
 }
 
 .header__user {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 35px;
 }
 
 .header__buttons {

@@ -35,7 +35,7 @@
   height: 45px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 20px;
+  margin-right: 19px;
 }
 
 .about__user {
@@ -135,6 +135,9 @@
   display: flex;
   margin-bottom: 55px;
   align-items: center; 
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .group {
@@ -151,16 +154,40 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include tablets {
+    margin-left: -3%;
+  }
 }
 
-.about {
-  .section-title {
-    margin-right: 60px;
+.about .section-title {
+  margin-right: 60px;
+  @include phones {
+    margin-right: 0;
+    width: 100%;
   }
 }
 
 .form__block--halfwidth input.form__block-field:first-child {
   @include tablets {
     border: none;
+  }
+}
+
+.user__title {
+  @Include phones {
+    display: none;
+  }
+}
+
+.exit-button {
+  @include phones {
+    display: none;
+  }
+}
+
+.user__exit-button {
+  display: none;
+  @include phones {
+    display: flex;
   }
 }

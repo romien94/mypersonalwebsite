@@ -4,6 +4,7 @@ const form = document.querySelector('#form'),
 
 sendButton.addEventListener('click', e => {
   e.preventDefault();
+  validateForm(form);
   let data = {};
   for (let field of formFields) {
     data[field.name] = field.value;
@@ -18,15 +19,23 @@ sendButton.addEventListener('click', e => {
 })
 
 function validateForm(form) {
+  let valid = true;
   for (let field of formFields) {
-    if (field.checkValidity()) {
-      (field.nextElementSibling)?field.parentNode.removeChild(field.nextElementSibling):'';
-      return true;
-    }
-    else {
-      (!field.nextElementSibling)?createError(field):'';
-      field.nextElementSibling.textContent = field.validationMessage;
-    }
+    checkField(field);
+    if (!checkField(field)) valid = false;
+  }
+  return valid;
+}
+
+function checkField(field) {
+  if (field.checkValidity()) {
+    (field.nextElementSibling)?field.parentNode.removeChild(field.nextElementSibling):'';
+    return true;
+  }
+  else {
+    (!field.nextElementSibling)?createError(field):'';
+    field.nextElementSibling.textContent = field.validationMessage;
+    return false;
   }
 }
 

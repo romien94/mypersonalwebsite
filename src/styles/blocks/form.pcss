@@ -30,14 +30,14 @@
 }
 
 .form__block-title {
-  width: 70%;
+  width: 60%;
   @include tablets {
     width: 50%;
   }
 }
 
 .form__block-percents {
-  width: 9%;
+  width: 20%;
   @include tablets {
     width: 16%;
   }
@@ -57,7 +57,7 @@
 
 .form__bottom {
   .form__block-percents {
-    width: 19%;
+    width: 30%;
     @include tablets {
       width: 27%;
     }
@@ -74,7 +74,7 @@
   }
 
 .form__block--halfwidth {
-  width: 55%;
+  width: 65%;
   .form__block-field {
     width: 100%;
   }
@@ -174,6 +174,9 @@
     flex-direction: column;
     padding: 0 14%;
   }
+  @include phones {
+    padding: 0;
+  }
 }
 
 .form__content-left {
@@ -224,6 +227,7 @@
 .form__buttons {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .form__block-field--bottompadding {
